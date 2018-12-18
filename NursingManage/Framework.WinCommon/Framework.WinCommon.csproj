@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C02385D5-08CA-497A-8C55-F7450434BB30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.WinCommon</RootNamespace>
+    <AssemblyName>Framework.WinCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.5.0.15095, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\01三方引用\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvanceSearch\CompareSignEnum.cs" />
+    <Compile Include="AdvanceSearch\EventSaveSearchArg.cs" />
+    <Compile Include="AdvanceSearch\EventSearchArgs.cs" />
+    <Compile Include="AdvanceSearch\FrmADSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearch\FrmADSearch.designer.cs">
+      <DependentUpon>FrmADSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSearch\FrmSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearch\FrmSearchList.Designer.cs">
+      <DependentUpon>FrmSearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSearch\FrmSearchSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearch\FrmSearchSave.Designer.cs">
+      <DependentUpon>FrmSearchSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSearch\ISearchColumn.cs" />
+    <Compile Include="AdvanceSearch\ISearchConfig.cs" />
+    <Compile Include="AdvanceSearch\ISearchParam.cs" />
+    <Compile Include="AdvanceSearch\ISearchRecord.cs" />
+    <Compile Include="AdvanceSearch\ISearchRecord_Detail.cs" />
+    <Compile Include="AdvanceSearch\U_ASRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvanceSearch\U_ASRow.designer.cs">
+      <DependentUpon>U_ASRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ComDelegates.cs" />
+    <Compile Include="Components\ControlExtend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DCM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OpaqueLayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\TreeViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ValidationInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ComboxList.cs" />
+    <Compile Include="ControlsExpandFun\ExTextBox.cs" />
+    <Compile Include="Controls\DgvCalendar.cs" />
+    <Compile Include="Controls\LabelMsg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZCDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZCTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UCPagingNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCPagingNavigation.Designer.cs">
+      <DependentUpon>UCPagingNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsCommon.cs" />
+    <Compile Include="Forms\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBase.designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEditorBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEditorBase.Designer.cs">
+      <DependentUpon>FrmEditorBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmListBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmListBase.Designer.cs">
+      <DependentUpon>FrmListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMDIBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMDIBase.designer.cs">
+      <DependentUpon>FrmMDIBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TreeData\TreeDataCommon.cs" />
+    <Compile Include="TreeData\TreeDataMenuItem.cs" />
+    <Compile Include="TreeData\TreeDataModel.cs" />
+    <Compile Include="TreeData\TreeViewHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdvanceSearch\FrmADSearch.resx">
+      <DependentUpon>FrmADSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceSearch\FrmSearchList.resx">
+      <DependentUpon>FrmSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceSearch\FrmSearchSave.resx">
+      <DependentUpon>FrmSearchSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceSearch\U_ASRow.resx">
+      <DependentUpon>U_ASRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCPagingNavigation.resx">
+      <DependentUpon>UCPagingNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEditorBase.resx">
+      <DependentUpon>FrmEditorBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmListBase.resx">
+      <DependentUpon>FrmListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMDIBase.resx">
+      <DependentUpon>FrmMDIBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdvanceSearch\search.ico" />
+    <Content Include="Icon\add.png" />
+    <Content Include="Icon\save.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Icon\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Common\Framework.Common.csproj">
+      <Project>{882DCB10-1C7A-4BC6-846F-0D878F182EC9}</Project>
+      <Name>Framework.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

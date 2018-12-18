@@ -1,0 +1,136 @@
+[16:07:10.773][DEBUG][10]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0834H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:11.419][DEBUG][10]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0834H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='一级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:11.680][DEBUG][10]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0834H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='二级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:11.938][DEBUG][10]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE = REGEXP_REPLACE('0834H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='三级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:12.308][DEBUG][10]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE = REGEXP_REPLACE('0834H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='心电监护' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:12.679][DEBUG][10]:select to_char(VERIFY_DATA_TIME,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from ORDERS@his t 
+inner join dept_vs_ward a on t.ordering_dept = a.Dept_Code 
+where 
+    t.VERIFY_DATA_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.VERIFY_DATA_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.PROCESSING_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+group by t.PROCESSING_NURSE,to_char(VERIFY_DATA_TIME,'yyyy-MM-dd')
+
+
+
+
+[16:07:57.301][DEBUG][13]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0824HB','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLY02'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:57.716][DEBUG][13]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0824HB','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLY02'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='一级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:57.973][DEBUG][13]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0824HB','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLY02'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='二级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:58.230][DEBUG][13]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE = REGEXP_REPLACE('0824HB','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLY02'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='三级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:58.604][DEBUG][13]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE = REGEXP_REPLACE('0824HB','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLY02'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='心电监护' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[16:07:58.984][DEBUG][13]:select to_char(VERIFY_DATA_TIME,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from ORDERS@his t 
+inner join dept_vs_ward a on t.ordering_dept = a.Dept_Code 
+where 
+    t.VERIFY_DATA_TIME > to_date('2018-09-01','yyyy-mm-dd') 
+and t.VERIFY_DATA_TIME < to_date('2018-10-01','yyyy-mm-dd') 
+and t.PROCESSING_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLY02'))) 
+and t.order_sub_no=1 
+group by t.PROCESSING_NURSE,to_char(VERIFY_DATA_TIME,'yyyy-MM-dd')
+
+
+
+

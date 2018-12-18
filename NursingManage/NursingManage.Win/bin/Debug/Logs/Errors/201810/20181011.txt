@@ -1,0 +1,198 @@
+[11:07:21.403][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 11:07:21
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[11:07:37.796][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 11:07:37
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[11:11:18.974][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 11:11:18
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[11:11:26.533][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 11:11:26
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[11:23:27.290][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 11:23:27
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:15:10.732][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 14:15:10
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:20:09.932][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 14:20:09
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:20:59.224][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 14:20:59
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:47:01.913][FATAL][1]:②出现应用程序未处理的异常：2018/10/11 14:47:01
+异常类型：FileNotFoundException
+异常消息：未能加载文件或程序集“Interop.gregn6Lib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+异常信息：   在 NursingManage.Win.PrintForm.InitializeComponent()
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 E:\soft\NursingManage\NursingManage.Win\PrintForm.cs:行号 16
+   在 NursingManage.Win.PrintHelper.ZhiKongJiLuByKeShi(T_ZHIKONG_KESHI jiLuModel, List`1 neiRongList, List`1 wenTiList) 位置 E:\soft\NursingManage\NursingManage.Win\PrintHelper.cs:行号 92
+   在 NursingManage.Win.ZhiLiangKongZhi.FrmZhiKongJianCha_KeShi.tsbtnPrint_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\ZhiLiangKongZhi\FrmZhiKongJianCha_KeShi.cs:行号 353
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+

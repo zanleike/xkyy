@@ -1,0 +1,317 @@
+[20:26:02.623][ERROR][17]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[20:27:09.550][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[20:27:50.704][ERROR][10]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[20:36:52.238][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[20:38:10.423][FATAL][1]:②出现应用程序未处理的异常：2018/3/27 20:38:10
+异常类型：COMException
+异常消息：没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))
+异常信息：   在 System.Windows.Forms.UnsafeNativeMethods.CoCreateInstance(Guid& clsid, Object punkOuter, Int32 context, Guid& iid)
+   在 System.Windows.Forms.AxHost.CreateWithLicense(String license, Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstanceCore(Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstance()
+   在 System.Windows.Forms.AxHost.GetOcxCreate()
+   在 System.Windows.Forms.AxHost.TransitionUpTo(Int32 state)
+   在 System.Windows.Forms.AxHost.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.AxHost.EndInit()
+   在 NursingManage.Win.PrintForm.InitializeComponent() 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.designer.cs:行号 58
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.cs:行号 19
+   在 NursingManage.Win.PrintHelper.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 G:\code\NursingManage\NursingManage.Win\PrintHelper.cs:行号 50
+   在 NursingManage.Win.PeiXunGuanLi.FrmShiTiMuBan.tsbtnPrint_Click(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmShiTiMuBan.cs:行号 281
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[20:38:10.703][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[20:38:22.607][FATAL][1]:②出现应用程序未处理的异常：2018/3/27 20:38:22
+异常类型：COMException
+异常消息：没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))
+异常信息：   在 System.Windows.Forms.UnsafeNativeMethods.CoCreateInstance(Guid& clsid, Object punkOuter, Int32 context, Guid& iid)
+   在 System.Windows.Forms.AxHost.CreateWithLicense(String license, Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstanceCore(Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstance()
+   在 System.Windows.Forms.AxHost.GetOcxCreate()
+   在 System.Windows.Forms.AxHost.TransitionUpTo(Int32 state)
+   在 System.Windows.Forms.AxHost.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.AxHost.EndInit()
+   在 NursingManage.Win.PrintForm.InitializeComponent() 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.designer.cs:行号 58
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.cs:行号 19
+   在 NursingManage.Win.PrintHelper.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 G:\code\NursingManage\NursingManage.Win\PrintHelper.cs:行号 50
+   在 NursingManage.Win.PeiXunGuanLi.FrmShiTiMuBan.tsbtnPrint_Click(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmShiTiMuBan.cs:行号 281
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[20:38:22.758][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[20:42:24.144][FATAL][1]:②出现应用程序未处理的异常：2018/3/27 20:42:24
+异常类型：COMException
+异常消息：没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))
+异常信息：   在 System.Windows.Forms.UnsafeNativeMethods.CoCreateInstance(Guid& clsid, Object punkOuter, Int32 context, Guid& iid)
+   在 System.Windows.Forms.AxHost.CreateWithLicense(String license, Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstanceCore(Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstance()
+   在 System.Windows.Forms.AxHost.GetOcxCreate()
+   在 System.Windows.Forms.AxHost.TransitionUpTo(Int32 state)
+   在 System.Windows.Forms.AxHost.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.AxHost.EndInit()
+   在 NursingManage.Win.PrintForm.InitializeComponent() 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.designer.cs:行号 58
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.cs:行号 19
+   在 NursingManage.Win.PrintHelper.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 G:\code\NursingManage\NursingManage.Win\PrintHelper.cs:行号 50
+   在 NursingManage.Win.PeiXunGuanLi.FrmShiTiMuBan.tsbtnPrint_Click(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmShiTiMuBan.cs:行号 281
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[20:42:24.919][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[20:46:45.321][ERROR][12]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[20:50:12.121][FATAL][10]:②出现应用程序未处理的异常：2018/3/27 20:50:12
+异常类型：COMException
+异常消息：没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))
+异常信息：   在 System.Windows.Forms.UnsafeNativeMethods.CoCreateInstance(Guid& clsid, Object punkOuter, Int32 context, Guid& iid)
+   在 System.Windows.Forms.AxHost.CreateWithLicense(String license, Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstanceCore(Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstance()
+   在 System.Windows.Forms.AxHost.GetOcxCreate()
+   在 System.Windows.Forms.AxHost.TransitionUpTo(Int32 state)
+   在 System.Windows.Forms.AxHost.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.AxHost.EndInit()
+   在 NursingManage.Win.PrintForm.InitializeComponent() 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.designer.cs:行号 58
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.cs:行号 19
+   在 NursingManage.Win.PrintHelper.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 G:\code\NursingManage\NursingManage.Win\PrintHelper.cs:行号 48
+   在 NursingManage.Win.PeiXunGuanLi.FrmShiTiMuBan.tsbtnPrint_Click(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmShiTiMuBan.cs:行号 276
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[20:50:12.483][ERROR][10]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[20:50:58.122][FATAL][10]:②出现应用程序未处理的异常：2018/3/27 20:50:58
+异常类型：COMException
+异常消息：没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))
+异常信息：   在 System.Windows.Forms.UnsafeNativeMethods.CoCreateInstance(Guid& clsid, Object punkOuter, Int32 context, Guid& iid)
+   在 System.Windows.Forms.AxHost.CreateWithLicense(String license, Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstanceCore(Guid clsid)
+   在 System.Windows.Forms.AxHost.CreateInstance()
+   在 System.Windows.Forms.AxHost.GetOcxCreate()
+   在 System.Windows.Forms.AxHost.TransitionUpTo(Int32 state)
+   在 System.Windows.Forms.AxHost.CreateHandle()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.AxHost.EndInit()
+   在 NursingManage.Win.PrintForm.InitializeComponent() 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.designer.cs:行号 58
+   在 NursingManage.Win.PrintForm..ctor(String templateName, DataTable dt, Dictionary`2 paramDict) 位置 G:\code\NursingManage\NursingManage.Win\PrintForm.cs:行号 19
+   在 NursingManage.Win.PrintHelper.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 G:\code\NursingManage\NursingManage.Win\PrintHelper.cs:行号 48
+   在 NursingManage.Win.PeiXunGuanLi.FrmShiTiMuBan.tsbtnPrint_Click(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmShiTiMuBan.cs:行号 276
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[20:50:58.472][ERROR][10]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[20:54:37.034][ERROR][16]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[21:04:41.080][ERROR][11]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[21:27:24.988][ERROR][11]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[21:29:23.625][ERROR][12]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[21:35:20.270][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[22:00:09.811][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[22:08:52.608][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[22:55:19.872][FATAL][1]:②出现应用程序未处理的异常：2018/3/27 22:55:19
+异常类型：OracleException
+异常消息：ORA-12570: 网络会话: 意外的数据包读取错误
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 G:\code\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 G:\code\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.PeiXuNGuanLi.ALTiKuGuanLi.GetDataByFenLei(String searchValue) 位置 G:\code\NursingManage\HursingManage.AL\PeiXuNGuanLi\ALTiKuGuanLi.cs:行号 230
+   在 NursingManage.Win.PeiXunGuanLi.FrmTiKuGuanLi.BindDataSourceByFenLei() 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmTiKuGuanLi.cs:行号 34
+   在 NursingManage.Win.PeiXunGuanLi.FrmTiKuGuanLi.FrmTiKuGuanLi_Load(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmTiKuGuanLi.cs:行号 47
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[22:55:20.691][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281

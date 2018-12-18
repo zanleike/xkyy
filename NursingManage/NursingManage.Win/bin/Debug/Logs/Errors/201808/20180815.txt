@@ -1,0 +1,125 @@
+[12:40:04.880][ERROR][9]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1706): 命令仅在页面视图中有效。
+   在 Microsoft.Office.Interop.Word.View.set_SeekView(WdSeekView prop)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 53
+[12:40:27.277][ERROR][9]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1706): 命令仅在页面视图中有效。
+   在 Microsoft.Office.Interop.Word.View.set_SeekView(WdSeekView prop)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 53
+[12:55:08.891][ERROR][9]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1706): 命令仅在页面视图中有效。
+   在 Microsoft.Office.Interop.Word.View.set_SeekView(WdSeekView prop)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 53
+[12:56:14.773][ERROR][9]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1706): 命令仅在页面视图中有效。
+   在 Microsoft.Office.Interop.Word.View.set_SeekView(WdSeekView prop)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 53
+[12:57:42.076][ERROR][10]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1706): 命令仅在页面视图中有效。
+   在 Microsoft.Office.Interop.Word.View.set_SeekView(WdSeekView prop)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 53
+[12:57:48.859][ERROR][10]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1706): 命令仅在页面视图中有效。
+   在 Microsoft.Office.Interop.Word.View.set_SeekView(WdSeekView prop)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 53
+[12:58:54.399][ERROR][10]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1420): 这不是有效文件名。
+请试用下列方法: 
+* 检查路径，确认键入无误。
+* 从文件和文件夹列表中选择文件。
+   在 Microsoft.Office.Interop.Word.InlineShapes.AddPicture(String FileName, Object& LinkToFile, Object& SaveWithDocument, Object& Range)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 60
+[13:01:08.812][ERROR][9]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.Runtime.InteropServices.COMException (0x800A1420): 这不是有效文件名。
+请试用下列方法: 
+* 检查路径，确认键入无误。
+* 从文件和文件夹列表中选择文件。
+   在 Microsoft.Office.Interop.Word.InlineShapes.AddPicture(String FileName, Object& LinkToFile, Object& SaveWithDocument, Object& Range)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 180
+[13:07:27.693][ERROR][9]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.InvalidOperationException: 如果应用程序没有控制台或控制台输入已通过文件进行了重定向，则无法读取键。请尝试使用 Console.Read。
+   在 System.Console.ReadKey(Boolean intercept)
+   在 System.Console.ReadKey()
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 329
+[13:11:06.233][ERROR][10]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.InvalidOperationException: 如果应用程序没有控制台或控制台输入已通过文件进行了重定向，则无法读取键。请尝试使用 Console.Read。
+   在 System.Console.ReadKey(Boolean intercept)
+   在 System.Console.ReadKey()
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 357
+[13:22:18.088][ERROR][18]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:50:23.152][ERROR][10]:导出文件失败,文件名:2018.8.14基础护理学15-18章试卷
+System.IO.IOException: 文件“D:\NursingManage\NursingManage.Win\bin\Debug\MyWord_Print.doc”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   在 System.IO.File.Delete(String path)
+   在 NursingManage.Win.WordImportOut.OutWord(DataTable dt, String defaultFileName) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 33
+[16:15:35.239][FATAL][8]:②出现应用程序未处理的异常：2018/8/15 16:15:35
+异常类型：OracleException
+异常消息：连接请求超时
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 D:\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 D:\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 D:\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 D:\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 D:\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToList() 位置 D:\NursingManage\Framework\Core\IQueryResult.cs:行号 142
+   在 HursingManage.AL.PeiXuNGuanLi.ALShiTiMuBan.GetListDataByShiTi(T_SHITI_MUBAN muBanModel) 位置 D:\NursingManage\HursingManage.AL\PeiXuNGuanLi\ALShiTiMuBan.cs:行号 342
+   在 NursingManage.Win.PeiXunGuanLi.FrmShiTiMuBan.tsbtnPrint_Click(Object sender, EventArgs e) 位置 D:\NursingManage\NursingManage.Win\PeiXunGuanLi\FrmShiTiMuBan.cs:行号 259
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[16:16:24.702][ERROR][18]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[16:16:56.676][ERROR][11]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:45:46.422][ERROR][9]:导出文件失败,文件名:MyWord_Print.doc
+System.IO.IOException: 文件“D:\NursingManage\NursingManage.Win\bin\Debug\MyWord_Print.doc”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalDelete(String path, Boolean checkHost)
+   在 System.IO.File.Delete(String path)
+   在 NursingManage.Win.WordImportOut.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 34
+[18:15:07.943][ERROR][9]:导出文件失败,文件名:MyWord_Print.doc
+System.Runtime.InteropServices.COMException (0x800706BE): 远程过程调用失败。 (异常来自 HRESULT:0x800706BE)
+   在 Microsoft.Office.Interop.Word.ApplicationClass.Quit(Object& SaveChanges, Object& OriginalFormat, Object& RouteDocument)
+   在 NursingManage.Win.WordImportOut.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 174
+[18:20:27.346][ERROR][10]:导出文件失败,文件名:MyWord_Print.doc
+System.Runtime.InteropServices.COMException (0x800706BA): RPC 服务器不可用。 (异常来自 HRESULT:0x800706BA)
+   在 Microsoft.Office.Interop.Word.DocumentClass.SaveAs(Object& FileName, Object& FileFormat, Object& LockComments, Object& Password, Object& AddToRecentFiles, Object& WritePassword, Object& ReadOnlyRecommended, Object& EmbedTrueTypeFonts, Object& SaveNativePictureFormat, Object& SaveFormsData, Object& SaveAsAOCELetter, Object& Encoding, Object& InsertLineBreaks, Object& AllowSubstitutions, Object& LineEnding, Object& AddBiDiMarks)
+   在 NursingManage.Win.WordImportOut.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 165
+[18:26:30.825][ERROR][9]:导出文件失败,文件名:MyWord_Print.doc
+System.Runtime.InteropServices.COMException (0x800A1066): 异常来自 HRESULT:0x800A1066
+   在 Microsoft.Office.Interop.Word.DocumentClass.Close(Object& SaveChanges, Object& OriginalFormat, Object& RouteDocument)
+   在 NursingManage.Win.WordImportOut.ShiTi(String title, List`1 shiTiList, Boolean isDisplayAnswer) 位置 D:\NursingManage\NursingManage.Win\WordImportOut.cs:行号 172

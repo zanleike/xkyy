@@ -1,0 +1,212 @@
+﻿@{
+    ViewBag.Title = "胸科护士考试";
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+@section Head{
+    <script>
+        $.mobile.loading('show', {
+            text: "正在加载，请稍后。。。", //加载器中显示的文字  
+            textVisible: true, //是否显示文字  
+            theme: 'a',        //加载器主题样式a-e  
+            textonly: false,   //是否只显示文字  
+            html: ""           //要显示的html内容，如图片等  
+        });
+        function submitAsk() {
+            var paperInfo = localStorage.getItem("PaperInfo");
+            var paperObj = JSON.parse(paperInfo);
+            var askStr = "";
+            var paperCount = paperObj.PaperTempletList.length;
+            var notAskCount = 0;
+            for (var i = 1; i <= paperCount ; i++) {
+                var r = localStorage.getItem(i);
+                if (r) {
+                    askStr += r;
+                } else {
+                    notAskCount++;
+                }
+                if (i < paperCount) {
+                    askStr += ",";
+                }
+            };
+            
+            confirmJQM("确定要提交试题吗? 试题数：" + paperCount + "未答数：" + notAskCount, function () {
+                        var mingXiId = paperObj.MingXiId;
+                        var kaoHao = paperObj.KaoHao;
+                        console.log(paperObj);
+                        var startTime = localStorage.getItem("StartTime");
+                        $.ajax({
+                            type: "post",
+                            url: '@Url.Content("~/Home/SavePaperResult")',
+                            data: { MingXiId: mingXiId, KaoHao: kaoHao, AnswerStr: askStr, StartTime: startTime, MuBanId: paperObj.MuBanId },
+                            ContentType: "application/json",
+                            dataType: "json",
+                            success: function (data, status) {
+                                console.log(data);
+                                    if (status == "success") {
+                                        if (data.Code == 0) {
+                                            showPromptMsg("答案提交成功", 1, function () {
+                                                localStorage.clear();
+                                                window.location.href = "@Url.Content("~/Home/Login")";
+                                                //window.location.reload(true);
+                                            });
+                                        } else {
+                                            showPromptMsg("提交答案失败，" + data.Message, 3);
+                                        }
+                                    } else {
+                                        showPromptMsg("提交答案发生异常");
+                                    }
+                                }
+                        });
+                    });
+                
+        }
+        function exitSys() {
+            confirmJQM("确实要退出考题，当前所有答题记录将清空。", function () {
+                $.ajax({
+                    type: "get",
+                    url: '@Url.Content("~/Home/loginout")',
+                    data: null,
+                    ContentType: "application/json",
+                    dataType: "text",
+                    success: function (data, status) {
+                        console.log(data);
+                        if (status == "success") {
+                            showPromptMsg("退出成功。", 1, function () {
+                                localStorage.clear();
+                                window.location.reload(true);
+                            });
+                        } else {
+                            showPromptMsg("退出失败。", 1);
+                        }
+                    }
+                });
+            });
+        }
+
+        function createPageHeadInfo(innerHtmlStr) {
+            var headInfo = document.getElementById("headInfo")
+            var p = document.createElement("p");
+            p.innerHTML = innerHtmlStr;
+            headInfo.appendChild(p);
+        }
+
+        function createInputItem(fieldset, itemName, itemContent, xuHao, isRadio) {
+            var lb = document.createElement("label");
+            lb.innerHTML = itemName + "." + itemContent;
+            var input = document.createElement("input");
+            input.setAttribute("type", isRadio ? "radio" : "checkbox");
+            input.setAttribute("name", xuHao);
+            input.setAttribute("value", itemName);
+
+            var askResult = localStorage.getItem(xuHao);
+            if (askResult) {
+                if (askResult.indexOf(itemName) >= 0)
+                    input.setAttribute("checked", "true");
+            }
+            lb.appendChild(input);
+            fieldset.appendChild(lb);
+        }
+        function loadPaperInfo() {
+            var paperInfo = localStorage.getItem("PaperInfo");
+            if (paperInfo == undefined || paperInfo == null) {
+                showPromptMsg("获取试题内容错误，登陆异常", 1, function () {
+                    localStorage.clear();
+                    window.location.href = "@Url.Content("~/Home/login")";
+                });
+                return false;
+            } else {
+                console.log("login success");
+            }
+
+            
+
+            var paperInfoObj = JSON.parse(paperInfo);
+
+            createPageHeadInfo("&nbsp 计划：" + paperInfoObj.JiHuaMingCheng);
+            createPageHeadInfo("&nbsp 试卷：" + paperInfoObj.MuBanMingCheng);
+            createPageHeadInfo("&nbsp 科室：" + paperInfoObj.KeShi);
+            createPageHeadInfo("&nbsp 编号：" + paperInfoObj.BianHao);
+            createPageHeadInfo("&nbsp 姓名：" + paperInfoObj.XingMing);
+            createPageHeadInfo("&nbsp 考号：" + paperInfoObj.KaoHao);
+            var st = localStorage.getItem("StartTime");
+            var startTime = new Date(parseInt(st)).Format("hh:mm:ss");
+            createPageHeadInfo("&nbsp 开始时间：" + startTime);
+
+            $.each(paperInfoObj.PaperTempletList, function (index, value) {
+
+                var fieldset = document.createElement('fieldset');
+                fieldset.setAttribute("data-role", "controlgroup");
+                var legend = document.createElement("legend");
+                legend.innerHTML = (index + 1) + "." + value.NeiRong;
+
+                var span = document.createElement("span");
+                span.setAttribute("style", "font-size:small;color:blue");
+                //span.innerHTML = "【" + value.LeiXing + "，分数：" + value.FenShu + "】【" + value.ShiTiXuHao + "】";
+                span.innerHTML = "【" + value.LeiXing + "，分数：" + value.FenShu + "】";
+                legend.appendChild(span);
+                fieldset.appendChild(legend);
+
+
+                createInputItem(fieldset, "A", value.XuanXiangA, value.ShiTiXuHao, value.LeiXing == "多选题" ? false : true);
+                createInputItem(fieldset, "B", value.XuanXiangB, value.ShiTiXuHao, value.LeiXing == "多选题" ? false : true);
+                if (value.XuanXiangC)
+                    createInputItem(fieldset, "C", value.XuanXiangC, value.ShiTiXuHao, value.LeiXing == "多选题" ? false : true);
+                if (value.XuanXiangD)
+                    createInputItem(fieldset, "D", value.XuanXiangD, value.ShiTiXuHao, value.LeiXing == "多选题" ? false : true);
+                if (value.XuanXiangE)
+                    createInputItem(fieldset, "E", value.XuanXiangE, value.ShiTiXuHao, value.LeiXing == "多选题" ? false : true);
+                document.getElementById("mainContent").appendChild(fieldset);
+            });
+            return true;
+        }
+
+        $(function () {
+            $("#mainContent input").on("click", function (e) {
+                var shiTiXuHao = e.currentTarget.name;
+                var askStr = "";
+                if (e.currentTarget.type == "radio") {
+                    if (e.currentTarget.checked) {
+                        askStr = e.currentTarget.value;
+                    }
+                } else {
+                    $("[name='" + shiTiXuHao + "']").each(function (index, item) {
+                        if (item.checked) {
+                            askStr += item.value;
+                        }
+                    });
+                }                
+                localStorage.setItem(shiTiXuHao.toString(), askStr);
+            });
+        });
+    </script>
+}
+@model HursingManage.WebServer.Models.ExaminationPaperResult
+<div data-role="page" id="pageMain">
+    <div data-role="header" data-position="inline" data-fullscreen="false">
+        <div id="headInfo" class="ui-field-contain">
+        </div>
+        <fieldset data-role="controlgroup">
+            <legend>
+                <button data-position="inline" onclick="submitAsk()">提交试题</button>
+                <button data-position="inline" onclick="exitSys()">退出答题</button></legend>
+        </fieldset>
+    </div>
+    <div id="mainContent" data-role="main" class="ui-content">
+        <script>
+            if (!loadPaperInfo()) {
+                window.location.href = "@Url.Content("~/Home/Login")";
+            }
+        </script>
+    </div>
+    <div data-role="footer" data-position="inline" data-fullscreen="true">
+        <fieldset data-role="controlgroup">
+            <legend>
+                <button data-position="inline" onclick="submitAsk()">提交试题</button>
+                <button data-position="inline" onclick="exitSys()">退出答题</button></legend>
+        </fieldset>
+    </div>
+</div>
+
+<script>
+    $.mobile.loading('hide');
+</script>

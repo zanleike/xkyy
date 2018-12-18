@@ -1,0 +1,7 @@
+G:\code\NursingManage\ZhCun.Framework.Common\bin\Debug\log4net.config
+G:\code\NursingManage\ZhCun.Framework.Common\bin\Debug\ZhCun.Framework.Common.dll.config
+G:\code\NursingManage\ZhCun.Framework.Common\bin\Debug\ZhCun.Framework.Common.XML
+G:\code\NursingManage\ZhCun.Framework.Common\bin\Debug\ZhCun.Framework.Common.dll
+G:\code\NursingManage\ZhCun.Framework.Common\bin\Debug\ZhCun.Framework.Common.pdb
+G:\code\NursingManage\ZhCun.Framework.Common\obj\Debug\ZhCun.Framework.Common.dll
+G:\code\NursingManage\ZhCun.Framework.Common\obj\Debug\ZhCun.Framework.Common.pdb

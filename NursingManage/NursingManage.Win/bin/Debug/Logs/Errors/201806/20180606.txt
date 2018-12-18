@@ -1,0 +1,451 @@
+[09:07:17.851][ERROR][9]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[09:22:20.326][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[09:23:19.155][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 9:23:19
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 G:\code\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 G:\code\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 G:\code\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 G:\code\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[09:23:21.548][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 G:\code\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[10:27:19.763][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 10:27:19
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:27:21.982][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[10:49:44.691][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 10:49:44
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.XiTongGuanLi.ALYongHuGuanLi.Update(T_USER_INFO userInfo, String& errMsg) 位置 E:\soft\NursingManage\HursingManage.AL\XiTongGuanLi\ALYongHuGuanLi.cs:行号 88
+   在 NursingManage.Win.XiTongGuanLi.FrmYongHuEdit.btnOK_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\XiTongGuanLi\FrmYongHuEdit.cs:行号 51
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:49:44.850][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[14:18:50.405][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 14:18:50
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.FrmDangAnNew_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 51
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:18:50.485][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[14:19:59.077][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 14:19:59
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:19:59.106][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[14:58:06.685][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 14:58:06
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.FrmDangAnNew_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 51
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:58:06.755][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[14:58:13.217][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 14:58:13
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[14:58:13.249][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:04:28.170][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 15:04:24
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.FrmDangAnNew_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 51
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:04:28.236][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:06:25.153][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 15:06:25
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:06:25.198][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:11:00.026][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 15:08:18
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:11:00.061][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[16:00:17.054][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 16:00:16
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.FrmDangAnNew_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 51
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[16:00:17.127][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[16:00:25.119][FATAL][1]:②出现应用程序未处理的异常：2018/6/6 16:00:25
+异常类型：OracleException
+异常消息：ORA-00904: "PIC": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[16:00:25.153][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281

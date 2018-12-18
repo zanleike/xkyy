@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DDDC094-F8E6-4739-99BA-9C69F0E159A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HursingManage.DBModel</RootNamespace>
+    <AssemblyName>HursingManage.DBModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProcedureBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_GetWeiKaoShiRenYuan.cs" />
+    <Compile Include="P_HuLiGuanLuTongJi.cs" />
+    <Compile Include="P_HuLiGuanLuTongJiKeShi.cs" />
+    <Compile Include="P_RiDongTaiHuiZong.cs" />
+    <Compile Include="P_Test.cs" />
+    <Compile Include="P_YaChuangTongJi.cs" />
+    <Compile Include="T_DANGAN.cs" />
+    <Compile Include="T_DANGAN.ex.cs" />
+    <Compile Include="T_DANGAN_EX.cs" />
+    <Compile Include="T_DANGAN_EX_PEIZHI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="T_DANGAN_PEIZHI.cs" />
+    <Compile Include="T_DANGAN_TABLE.cs" />
+    <Compile Include="T_DANGAN_TABLE_CONFIG.cs" />
+    <Compile Include="T_DEPART.cs" />
+    <Compile Include="T_DEPART.ex.cs" />
+    <Compile Include="T_DICTIONARY.cs" />
+    <Compile Include="T_GONGZUOLIANG.cs" />
+    <Compile Include="T_GONGZUOLIANG_DETAIL.cs" />
+    <Compile Include="T_GONGZUOLIANG_PEIZHI.cs" />
+    <Compile Include="T_JINENGBIAOZHUN.cs" />
+    <Compile Include="T_JINENGLEIBIE.cs" />
+    <Compile Include="T_KESHI.cs" />
+    <Compile Include="T_KESHIRENYUAN.cs" />
+    <Compile Include="T_LOGS.cs" />
+    <Compile Include="T_MENU.cs" />
+    <Compile Include="T_PEIXUNJIHUA.cs" />
+    <Compile Include="T_PEIXUNJIHUA.ex.cs" />
+    <Compile Include="T_PEIXUNJIHUA_KESHI.cs" />
+    <Compile Include="T_PEIXUNJIHUA_MINGXI.cs" />
+    <Compile Include="T_PEIXUNJIHUA_MINGXI_WEIKAO.cs" />
+    <Compile Include="T_PEIXUNJIHUA_MUBAN.cs" />
+    <Compile Include="T_PEIXUNQIANDAO.cs" />
+    <Compile Include="T_ROLE.cs" />
+    <Compile Include="T_ROLE_MENU.cs" />
+    <Compile Include="T_SEARCH_COLUMN.cs" />
+    <Compile Include="T_SEARCH_RECORD.cs" />
+    <Compile Include="T_SEARCH_RECORD_DETAIL.cs" />
+    <Compile Include="T_SHITI.cs" />
+    <Compile Include="T_SHITI_FENLEI.cs" />
+    <Compile Include="T_SHITI_MUBAN.cs" />
+    <Compile Include="T_SHITI_MUBAN.ex.cs" />
+    <Compile Include="T_SHITI_MUBAN_FENLEI.cs" />
+    <Compile Include="T_SHITI_MUBAN_MINGXI.cs" />
+    <Compile Include="T_USER_INFO.cs" />
+    <Compile Include="T_ZHIKONGJIHUA.cs" />
+    <Compile Include="T_ZHIKONGJIHUA_JIEGUO.cs" />
+    <Compile Include="T_ZHIKONGJIHUA_KESHI.cs" />
+    <Compile Include="T_ZHIKONGJIHUA_NEIRONG.cs" />
+    <Compile Include="T_ZHIKONG_KESHI.cs" />
+    <Compile Include="T_ZHIKONG_KESHI_NEIRONG.cs" />
+    <Compile Include="T_ZHIKONG_KESHI_WENTI.cs" />
+    <Compile Include="T_ZHILIANGBIAOZHUN.cs" />
+    <Compile Include="T_ZHILIANGBIAOZHUN_LEIBIE.cs" />
+    <Compile Include="T_ZHILIANGBIAOZHUN_LEIBIE_KS.cs" />
+    <Compile Include="T_ZHILIANGBIAOZHUN_QUANXIAN.cs" />
+    <Compile Include="V_DANGAN.cs" />
+    <Compile Include="V_PEIXUNJIEGUO_HUIZONG.cs" />
+    <Compile Include="V_PEIXUNJIHUA_KESHI.cs" />
+    <Compile Include="V_PEIXUNJIHUA_MINGXI.cs" />
+    <Compile Include="V_PEIXUNJIHUA_MINGXI_WEIKAO.cs" />
+    <Compile Include="V_PEIXUNJIHUA_MUBAN.cs" />
+    <Compile Include="V_SHITI_MUBAN_MINGXI.cs" />
+    <Compile Include="V_SHITI_MUBAN_MINGXI.ex.cs" />
+    <Compile Include="V_ZHIKONGJIHUA_BIAOZHUN.cs" />
+    <Compile Include="V_ZHIKONGJIHUA_KESHI.cs" />
+    <Compile Include="V_ZHIKONGJIHUA_NEIRONG.cs" />
+    <Compile Include="V_ZHIKONG_HEGELV.cs" />
+    <Content Include="sql\procedureScript.sql" />
+    <Content Include="sql\TableScript.sql" />
+    <Compile Include="TNumberConfig.cs" />
+    <Content Include="sql\DefaultData.sql" />
+    <Content Include="sql\UpdateScript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{AF89E385-7F12-4B3F-B558-7B54C28EDC4D}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

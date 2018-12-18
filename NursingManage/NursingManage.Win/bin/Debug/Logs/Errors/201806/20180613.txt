@@ -1,0 +1,178 @@
+[10:40:57.650][FATAL][1]:②出现应用程序未处理的异常：2018/6/13 10:40:57
+异常类型：OracleException
+异常消息：ORA-00904: "JIANKANGZHUANGKUANG": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.FrmDangAnNew_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 51
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:40:57.741][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[10:41:11.965][FATAL][1]:②出现应用程序未处理的异常：2018/6/13 10:41:11
+异常类型：OracleException
+异常消息：ORA-00904: "JIANKANGZHUANGKUANG": 标识符无效
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 298
+   在 Framework.DBHelper.OracleHelper.GetDataSet(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 86
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 325
+   在 Framework.DBHelper.DbHelperBase.GetDataTable(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 318
+   在 Framework.Core.QueryResult.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 47
+   在 Framework.Core.QueryResult`1.ToDataTable() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 158
+   在 HursingManage.AL.DangAnGuanLi.ALDangAn.GetData(Int32 onePage, Int32 pageNo, Int32& recordCount, Boolean isAdSearch, String serValue) 位置 E:\soft\NursingManage\HursingManage.AL\DangAnGuanLi\ALDangAn.cs:行号 175
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.BindDataSource() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 30
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnNew.tsBtnSearch_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnNew.cs:行号 77
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:41:11.995][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[10:43:13.236][FATAL][1]:②出现应用程序未处理的异常：2018/6/13 10:43:13
+异常类型：FormatException
+异常消息：该字符串未被识别为有效的 DateTime。
+异常信息：   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   在 System.Convert.ToDateTime(Object value)
+   在 Framework.WinCommon.Components.DCM.SetDateTimePickerValue(Control dateTimePicker, Object value) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 571
+   在 Framework.WinCommon.Components.DCM.SetControlValue[T](T obj) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 333
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnSubTableEdit.FrmDangAnSubTableEdit_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnSubTableEdit.cs:行号 59
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:43:50.138][FATAL][1]:②出现应用程序未处理的异常：2018/6/13 10:43:50
+异常类型：FormatException
+异常消息：该字符串未被识别为有效的 DateTime。
+异常信息：   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   在 System.Convert.ToDateTime(Object value)
+   在 Framework.WinCommon.Components.DCM.SetDateTimePickerValue(Control dateTimePicker, Object value) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 571
+   在 Framework.WinCommon.Components.DCM.SetControlValue[T](T obj) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 333
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnSubTableEdit.FrmDangAnSubTableEdit_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnSubTableEdit.cs:行号 59
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:44:44.148][FATAL][1]:②出现应用程序未处理的异常：2018/6/13 10:44:44
+异常类型：FormatException
+异常消息：该字符串未被识别为有效的 DateTime。
+异常信息：   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value, IFormatProvider provider)
+   在 System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   在 System.Convert.ToDateTime(Object value)
+   在 Framework.WinCommon.Components.DCM.SetDateTimePickerValue(Control dateTimePicker, Object value) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 571
+   在 Framework.WinCommon.Components.DCM.SetControlValue[T](T obj) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 333
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnSubTableEdit.FrmDangAnSubTableEdit_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnSubTableEdit.cs:行号 59
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:32:37.211][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 套接字操作尝试一个无法连接的主机。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:32:49.971][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 套接字操作尝试一个无法连接的主机。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:41:18.954][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 套接字操作尝试一个无法连接的主机。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:37:39.991][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)

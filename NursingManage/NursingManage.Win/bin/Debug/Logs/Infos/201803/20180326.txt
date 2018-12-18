@@ -1,0 +1,66 @@
+[21:51:16.012][DEBUG][16]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2017-12-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-01-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0825H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LQ02'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[21:51:51.096][DEBUG][16]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-01-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-02-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0825H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('ZH04'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[21:52:37.376][DEBUG][16]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-02-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-03-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0825H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('WJ03'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[22:37:46.180][DEBUG][11]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-03-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-04-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0844H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split ('LLJ01'))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[22:44:27.225][DEBUG][11]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-03-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-04-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0829H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+
+[22:46:36.816][DEBUG][11]:select to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd') as DateStr,count(1) as DateCount 
+from orders_execute@his t 
+where 
+    t.EXECUTE_DATE_TIME > to_date('2018-03-01','yyyy-mm-dd') 
+and t.EXECUTE_DATE_TIME < to_date('2018-04-01','yyyy-mm-dd') 
+and t.EXECUTE_WARD_CODE =  REGEXP_REPLACE('0834H','HB|HN','H') 
+and t.EXECUTE_NURSE in (SELECT COLUMN_VALUE FROM table (split (''))) 
+and t.order_sub_no=1 
+and ADMINISTRATION='特级护理' 
+group by to_char(t.EXECUTE_DATE_TIME ,'yyyy-MM-dd')
+

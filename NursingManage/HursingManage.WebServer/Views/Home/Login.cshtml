@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "胸科护士考试登陆";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+@section Head{
+    <script>
+
+        function DateDiff(sDate1, sDate2){  //sDate1和sDate2是2002-12-18格式  
+            var aDate, oDate1, oDate2, iDays;  
+            aDate = sDate1.split("-");  
+            oDate1 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);  //转换为12-18-2002格式  
+            aDate = sDate2.split("-");  
+            oDate2 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);  
+            iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 /24);  //把相差的毫秒数转换为天数  
+            return iDays;  
+        }  
+
+        function login() {
+            var bianHao = $("#mainContent input[name='BianHao']").val();
+            var kaoHao = $("#mainContent input[name='KaoHao']").val();
+            if (!bianHao || !kaoHao) {
+                showPromptMsg("编号和考号不能为空", 2);
+                return;
+            }
+
+            var lastLoginTime = localStorage.getItem("StartTime");
+            var a = new Date(parseInt(lastLoginTime));
+            var b = new Date();
+            var total = (b - a) / 1000;
+            if (total / 60 > 120) {
+                //超过2小时需要重新答题
+                console.log("登陆超时");
+                localStorage.clear();
+            }
+            $.ajax({
+                type: "post",
+                url: '@Url.Content("~/Home/GetPaper")',
+                data: { BianHao: bianHao, KaoHao: kaoHao, MingXiId: localStorage.getItem("MingXiId") },
+                ContentType: "application/json",
+                dataType: "json",
+                success: function (data, status) {
+                    //console.log(data);
+                    if (status == "success") {
+                        if (data == undefined || data == null) {
+                            showPromptMsg("登陆失败，服务器异常。", 2);
+                        } else if (data.Code != 0) {
+                            showPromptMsg("登陆失败 " + data.Message, 2);
+                        } else {
+                            showPromptMsg("登陆成功", 1, function () {
+                                try {
+                                    console.log("登陆成功");
+                                    if (localStorage.getItem("MingXiId") != data.MingXiId && localStorage.getItem("KaoHao")!=data.KaoHao) {
+                                        localStorage.clear();
+                                        localStorage.setItem("MingXiId", data.MingXiId);
+                                        localStorage.setItem("KaoHao", data.kaoHao);
+                                        localStorage.setItem("PaperInfo", JSON.stringify(data));
+                                        //已经登陆过的，还保持原有试题顺序
+                                        localStorage.setItem("StartTime", Date.parse(new Date()));
+                                    }
+                                    window.location.href = "@Url.Content("~/Home/Index")";
+                                } catch (e) {
+                                    alert(e.message);
+                                }                                
+                            });
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+}
+
+<div data-role="page">
+    <div data-role="header" data-position="inline" data-fullscreen="false">
+        <h1>考试登陆</h1>
+    </div>
+
+    <div id="mainContent" data-role="main" class="ui-content">
+            <div class="ui-field-contain">
+                <label for="bianhao">员工编号：</label><input type="text" name="BianHao" value="" />       
+                <label for="xingming">考号：</label><input type="text" name="KaoHao"  value=""  />
+            </div>
+            <div class="ui-field-contain">
+                <button data-inline="true"  onclick="login()">提交</button>
+            </div>
+    </div>
+</div>

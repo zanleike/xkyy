@@ -1,0 +1,191 @@
+[09:48:24.751][ERROR][10]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[09:52:17.495][ERROR][10]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[10:36:55.528][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[11:09:37.385][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[16:09:55.973][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[16:36:45.188][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[16:41:34.297][FATAL][1]:②出现应用程序未处理的异常：2018/6/14 16:41:34
+异常类型：NullReferenceException
+异常消息：未将对象引用设置到对象的实例。
+异常信息：   在 NursingManage.Win.DangAnGuanLi.ucInput.InitControl(InputEditConfig config, DCM dcm, ComboxList cboxList) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\ucInput.cs:行号 59
+   在 NursingManage.Win.DangAnGuanLi.ucInput..ctor(InputEditConfig config, DCM dcm, ComboxList cboxList) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\ucInput.cs:行号 24
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnSubTableEdit.InitInputControl() 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnSubTableEdit.cs:行号 45
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnSubTableEdit.FrmDangAnSubTableEdit_Load(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnSubTableEdit.cs:行号 58
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[16:41:34.600][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:27:38.399][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:29:40.589][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:32:04.222][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:32:31.099][FATAL][1]:②出现应用程序未处理的异常：2018/6/14 17:32:31
+异常类型：NullReferenceException
+异常消息：未将对象引用设置到对象的实例。
+异常信息：   在 Framework.Common.Helpers.FileHelper.ImageToByteArray(Image img) 位置 E:\soft\NursingManage\Framework.Common\Helpers\FileHelper.cs:行号 23
+   在 Framework.WinCommon.Components.DCM.GetPictureBox(Control ctrl) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 484
+   在 Framework.WinCommon.Components.DCM.SetValueToClassObj[T](T obj) 位置 E:\soft\NursingManage\Framework.WinCommon\Components\DCM.cs:行号 241
+   在 NursingManage.Win.DangAnGuanLi.FrmDangAnSubTableEdit.btnOK_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\DangAnGuanLi\FrmDangAnSubTableEdit.cs:行号 72
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[17:46:00.805][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:49:11.404][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:53:49.215][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:56:43.341][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[18:01:15.510][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[18:05:26.523][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[18:06:36.753][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[18:08:16.044][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[18:14:31.190][ERROR][5]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)

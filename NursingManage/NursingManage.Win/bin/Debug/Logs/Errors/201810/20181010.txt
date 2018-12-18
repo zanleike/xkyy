@@ -1,0 +1,72 @@
+[15:54:25.874][ERROR][11]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:54:39.011][FATAL][1]:②出现应用程序未处理的异常：2018/10/10 15:54:38
+异常类型：OracleException
+异常消息：连接请求超时
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 46
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:54:54.185][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): 连接请求超时
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:55:17.107][FATAL][1]:②出现应用程序未处理的异常：2018/10/10 15:55:17
+异常类型：OracleException
+异常消息：连接请求超时
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 46
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:55:32.266][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): 连接请求超时
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281

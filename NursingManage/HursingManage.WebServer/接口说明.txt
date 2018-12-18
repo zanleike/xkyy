@@ -1,0 +1,152 @@
+﻿护理管理系统-终端考试接口说明
+
+1. 接口请求说明
+护理管理考试系统接口采用http + json 的 webapi接口方式，所有接口都采用POST方式
+	http://<server>:<port>/api/Examination/<action>
+	server:服务器IP地址;
+	port：web服务器端口;
+	action: 请求功能
+
+接口验证采用自定义header，每次请求需加上，具体当以如下：
+	XMDN:手机号码（非必填）；
+	DEVICEID：设备ID，做为终端设备的唯一表示（无线网络MAC地址或其它）;
+	XKEY:固定值, AB2A6C0C11034294A5238A7E59FB149C;
+	XTIMESTAMP:时间戳（long），本地时间必须与服务器时间相差30分钟以内；
+	XTOKEN：动态令牌，由 DEVICEID + XTIMESTAMP + 特殊标记的 MD5值；
+			格式如下：
+			")bb(;@201" + deviceId + "ad@xbb" + timeStamp.Substring(timeStamp.Length - 7, 7)
+
+返回结果基类（ExaminationResult），所有请求的返回结果都继承该类：
+	Code：数值；结果代码；
+		说明如下：
+			0为成功；
+			101:表示调用程序逻辑错误，参数不正确，需要调用客户端检查错误；
+			102:表示查询逻辑提示，客户端可直接获取message后提示；
+			901:header验证失败；
+			909:header验证异常；
+	message：当执行失败（code不等于0时）返回错误代码；
+	ServerTimeStamp：服务器时间戳（毫秒）
+
+2.请求试题
+	请求指定人员的考试试题模板、计划内容、试卷，此请求可能包含多个计划试题；
+	当请求成功时显示所有计划（试题）列表，当前科室个人信息等；
+	action: GetPaper;
+	请求参数(json)：
+		BianHao: 字符串；考试人员的编号；
+		XingMing：字符串；考试人员的姓名；
+		
+	返回结果(json)，继承ExaminationResult：
+		BianHao:	当前考试人员编号
+		XingMing:	当前考试人员姓名
+		KeShi:		当前考试人员科室
+		JiHuaMingXiList: 计划列表数组
+						 id:试题明细id，对应考试人员id与试题模板的唯一id，用于上传答案；
+						 MuBanId：试题模板id，每套题的唯一id；
+						 MuBanMingCheng：试题模板名称；
+						 JiHuaMingCheng：考试计划名称；
+						 PaperTempletList：试题明细数组，定义如下：
+										   ShiTiXuHao：数值类型，试题序号，需按试题需要上传答案；
+										   BianHao：试题编号，内部使用，题库中的唯一表示；
+										   NeiRong：题目名称；
+										   LeiXing：试题类型，单选题、多选题、判断题；
+										   FenShu： 浮点类型，分数；
+										   XuanXiangA：选项A；
+										   XuanXiangB：选项B；
+										   XuanXiangC：选项C；
+										   XuanXiangD：选项D；
+										   XuanXiangE：选项E；
+										   XuanXiangF：选项F；
+										   关于选项，判断题只有A、B两个选项，多选题通常只有A-E，如果选项为空则可不显示；
+
+	示例：
+		请求地址： http://127.0.0.1:5000/api/Examination/GetPaper
+		请求参数： {"BianHao":"ZSJ01","XingMing":"周淑静"}
+		返回数据：
+		{
+		  "BianHao": "ZSJ01",
+		  "XingMing": "周淑静",
+		  "KeShi": "结核二科",
+		  "JiHuaMingXiList": [
+			{
+			  "id": "FA6E60FDDF5F499988B9B53DE7D851D6",
+			  "JiHuaMingCheng": "测试计划1",
+			  "MuBanId": "E221D9040E034ED2960A0F18919F7AF0",
+			  "MuBanMingCheng": "测试模板F卷",
+			  "PaperTempletList": [
+				{
+				  "ShiTiXuHao": 1,
+				  "BianHao": "FCK01_002",
+				  "NeiRong": "西方医学史公认古埃及的Ebers史书是",
+				  "LeiXing": "单选题",
+				  "FenShu": 0.30,
+				  "XuanXiangA": "最早记述有医学内容的史书",
+				  "XuanXiangB": "详细描述妇科检查的教材",
+				  "XuanXiangC": "记录妇产科及妇产科护理学内容的书",
+				  "XuanXiangD": "最早记述妇产科和妇产科护理学发展的史书",
+				  "XuanXiangE": "详细记录子宫解剖特点的史书"
+				},
+				{
+				  "ShiTiXuHao": 2,
+				  "BianHao": "FCK01_003",
+				  "NeiRong": "Rubbonla主教于公元前400年在Edssa创立了第一家",
+				  "LeiXing": "单选题",
+				  "FenShu": 0.30,
+				  "XuanXiangA": "西医院",
+				  "XuanXiangB": "妇人医院",
+				  "XuanXiangC": "儿童医院",
+				  "XuanXiangD": "卫生学校",
+				  "XuanXiangE": "护士学校"
+				},
+				{
+				  "ShiTiXuHao": 3,
+				  "BianHao": "FCK01_004",
+				  "NeiRong": "公元500年，印度的科学家Susruta首次报告了",
+				  "LeiXing": "单选题",
+				  "FenShu": 0.30,
+				  "XuanXiangA": "产褥感染",
+				  "XuanXiangB": "泌尿系统感染 ",
+				  "XuanXiangC": "产褥病率",
+				  "XuanXiangD": "产钳助产",
+				  "XuanXiangE": "麻醉学"
+				}
+			  ]
+			}
+		  ],
+		  "code": 0,
+		  "ServerTimeStamp": 1500967800259
+		}
+
+
+
+3.上传试题
+	用于答案上传至服务器，并进行评分；
+	action: SetResult;
+	请求参数（json）：
+		BianHao：当前人员编号；
+		XingMing：当前考试人员姓名；
+		Id：试题明细id，请求试题的id一致；
+		MuBanId：模板id，请求试题中的MuBanId一致；
+		StartTime：考试开始时间,字符串格式(yyyy-MM-dd HH:mm:ss)；
+		EndTime：考试结束时间，字符串格式(yyyy-MM-dd HH:mm:ss)；
+		AnswerStr：考试试题答案，答案由 试题序号排序依次以英文逗号（,）隔开批量上传，答案可为空，但不可缺少"逗号"；
+	返回结果：
+		ExaminationResult（参考 1. 接口请求说明）
+	
+	示例：
+	请求地址：http://127.0.0.1:5000/api/Examination/SetResult
+	请求参数：
+	{
+	  "BianHao": "ZSJ01",
+	  "XingMing": "周淑静",
+	  "Id": "FA6E60FDDF5F499988B9B53DE7D851D6",
+	  "MuBanId": "E221D9040E034ED2960A0F18919F7AF0",
+	  "AnswerStr": "a,b,c,de,e,ab,c,d,d",
+	  "StartTime": "2017-07-25 15:33:04",
+	  "EndTime": "2017-07-25 15:34:17"
+	}
+	返回结果：
+	{
+	  "code": 0,
+	  "message": "",
+	  "ServerTimeStamp": 1500968154010
+	}

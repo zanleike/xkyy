@@ -1,0 +1,5 @@
+G:\code\NursingManage\ZhCun.Framework\bin\Debug\ZhCun.Framework.dll.config
+G:\code\NursingManage\ZhCun.Framework\bin\Debug\ZhCun.Framework.dll
+G:\code\NursingManage\ZhCun.Framework\bin\Debug\ZhCun.Framework.pdb
+G:\code\NursingManage\ZhCun.Framework\obj\Debug\ZhCun.Framework.dll
+G:\code\NursingManage\ZhCun.Framework\obj\Debug\ZhCun.Framework.pdb

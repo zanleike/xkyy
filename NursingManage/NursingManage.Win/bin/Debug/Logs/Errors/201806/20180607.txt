@@ -1,0 +1,475 @@
+[10:23:28.333][ERROR][10]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[10:24:30.627][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 10:24:30
+异常类型：OracleException
+异常消息：连接请求超时
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[10:24:31.056][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:06:19.724][ERROR][10]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:06:36.088][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 15:06:36
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:06:38.259][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:08:08.489][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 15:08:08
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:08:10.040][ERROR][12]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:08:14.579][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[15:17:54.753][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:18:07.753][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 15:18:07
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:25:13.152][ERROR][9]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:34:00.761][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[15:34:07.634][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 15:34:07
+异常类型：OracleException
+异常消息：网络传输: TCP 传输地址连接故障
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[15:34:08.022][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[17:26:53.269][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 17:26:53
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[17:26:53.269][ERROR][11]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:26:55.471][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[17:28:46.098][ERROR][4]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 您的主机中的软件中止了一个已建立的连接。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:28:46.099][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 17:28:45
+异常类型：OracleException
+异常消息：网络传输: TCP 传输地址连接故障
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[17:28:46.451][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[17:59:13.432][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 17:59:13
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[17:59:13.433][ERROR][12]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[17:59:15.623][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[17:59:23.529][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 17:59:23
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[17:59:25.685][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[18:01:15.608][ERROR][13]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)
+[18:01:15.608][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 18:01:15
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 NursingManage.Win.FrmLogin.txtMiMa_KeyDown(Object sender, KeyEventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 38
+   在 System.Windows.Forms.Control.OnKeyDown(KeyEventArgs e)
+   在 Framework.WinCommon.Controls.ZCTextBox.OnKeyDown(KeyEventArgs e) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 115
+   在 System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   在 System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   在 System.Windows.Forms.Control.WmKeyChar(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   在 System.Windows.Forms.TextBox.WndProc(Message& m)
+   在 Framework.WinCommon.Controls.ZCTextBox.WndProc(Message& m) 位置 E:\soft\NursingManage\Framework.WinCommon\Controls\ZCTextBox.cs:行号 77
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[18:01:17.794][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[18:01:25.331][FATAL][1]:②出现应用程序未处理的异常：2018/6/7 18:01:25
+异常类型：OracleException
+异常消息：ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+异常信息：   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 216
+   在 Framework.DBHelper.OracleHelper.GetDataReader(String sqlText, CommandType cmdType, CommandBehavior cmdBehavior, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\OracleHelper.cs:行号 101
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 240
+   在 Framework.DBHelper.DbHelperBase.GetDataReader(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 247
+   在 Framework.Core.QueryResult`1.ToList(Boolean isFirst) 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 135
+   在 Framework.Core.QueryResult`1.ToEntity() 位置 E:\soft\NursingManage\Framework\Core\IQueryResult.cs:行号 146
+   在 HursingManage.AL.ALLogin.Login(String gongHao, String pwd) 位置 E:\soft\NursingManage\HursingManage.AL\ALLogin.cs:行号 59
+   在 NursingManage.Win.FrmLogin.btnLogin_Click(Object sender, EventArgs e) 位置 E:\soft\NursingManage\NursingManage.Win\FrmLogin.cs:行号 45
+   在 System.Windows.Forms.Control.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnClick(EventArgs e)
+   在 System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   在 System.Windows.Forms.Button.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[18:01:27.501][ERROR][1]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务 ---> OracleInternal.Network.NetworkException (0x000030E2): ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+   在 OracleInternal.Network.OracleCommunication.DoConnect(String tnsDescriptor)
+   在 OracleInternal.Network.OracleCommunication.Connect(String tnsDescriptor, Boolean doNAHandshake, String IName)
+   在 OracleInternal.ServiceObjects.OracleConnectionImpl.Connect(ConnectionString cs, Boolean bOpenEndUserSession, String instanceName)
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 E:\soft\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 58
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 E:\soft\NursingManage\HursingManage.AL\ALBase.cs:行号 281
+[19:37:42.795][ERROR][9]:更新发生了错误
+System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.2.200:10055
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 FSLib.App.SimpleUpdater.Updater.DownloadUpdateInfoInternal(Object sender, RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.OnDoWork(RunworkEventArgs e)
+   在 FSLib.App.SimpleUpdater.Wrapper.BackgroundWorker.RunWorkAsyncInternal(Object e)

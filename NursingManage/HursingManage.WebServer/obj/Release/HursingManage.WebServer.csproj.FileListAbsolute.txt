@@ -1,0 +1,2 @@
+E:\soft\NursingManage\HursingManage.WebServer\obj\Release\HursingManage.WebServer.csprojAssemblyReference.cache
+E:\soft\NursingManage\HursingManage.WebServer\obj\Release\HursingManage.WebServer.csproj.CoreCompileInputs.cache

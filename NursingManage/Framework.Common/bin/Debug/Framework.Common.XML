@@ -1,0 +1,2221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Framework.Common</name>
+    </assembly>
+    <members>
+        <member name="P:Framework.Common.AppConfigBase`1.AppCaption">
+            <summary>
+            程序标题
+            </summary>
+        </member>
+        <member name="P:Framework.Common.AppConfigBase`1.OnlyRunOneMode">
+            <summary>
+            运行一个实例的模式
+            0:只运行1个,1:一个目录只运行1个
+            </summary>
+        </member>
+        <member name="P:Framework.Common.AppConfigBase`1.AppUpdaterMode">
+            <summary>
+            在线升级模式
+            0:不启用,1:软件启动时提示,2:菜单手动
+            </summary>
+        </member>
+        <member name="P:Framework.Common.AppConfigBase`1.AppUpdaterUrl">
+            <summary>
+            升级url地址
+            </summary>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.DecryptEncrypt.GetLegalKey">
+            <summary>
+            获得密钥
+            </summary>
+            <returns>密钥</returns>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.DecryptEncrypt.GetLegalIV">
+            <summary>
+            获得初始向量IV
+            </summary>
+            <returns>初试向量IV</returns>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.DecryptEncrypt.Encrypto(System.String)">
+            <summary>
+            加密方法
+            </summary>
+            <param name="Source">待加密的串</param>
+            <returns>经过加密的串</returns>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.DecryptEncrypt.Decrypto(System.String)">
+            <summary>
+            解密方法
+            </summary>
+            <param name="Source">待解密的串</param>
+            <returns>经过解密的串</returns>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.Utils.GetHostName">
+            <summary>
+            获取主机名
+            </summary>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.Utils.GetHostIP">
+            <summary>
+            获取主机IP
+            </summary>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.Utils.GetGUID16">
+            <summary>
+            获得16为GUID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.Utils.ConvertType``1(System.Object)">
+            <summary>
+            将一个object类型转换成指定类型
+            </summary>
+        </member>
+        <member name="M:Framework.Common.CommonFunction.Utils.ConvertDataRow``1(System.Data.DataRow,System.String)">
+            <summary>
+            将datarow制定列转换成强类型，如果不存在则返回缺省值或null
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Configurations">
+            <summary>
+            读取与设置当前程序配置项的静态类
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Configurations.FTPUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Configurations.GetConnectString(System.String)">
+            <summary>
+            获得指定key的连接字符串
+            </summary>
+            <param name="keyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Configurations.SetConnectString(System.String,System.String)">
+            <summary>
+            设置连接字符串
+            </summary>
+            <param name="keyName">连接字符串名称</param>
+            <param name="value">连接字符串值</param>
+        </member>
+        <member name="M:Framework.Common.Configurations.GetAppSettings(System.String)">
+            <summary>
+            获得指定key的配置项
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Configurations.SetAppSettings(System.String,System.String)">
+            <summary>
+            设置一个配置项
+            </summary>
+            <param name="keyName">配置项名</param>
+            <param name="value">配置项值</param>
+        </member>
+        <member name="F:Framework.Common.Constants.MD5EncodingText">
+            <summary>
+            MD5编码类型
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Constants.Base64EncodingText">
+            <summary>
+            Base64的编码
+            </summary>
+        </member>
+        <member name="T:Framework.Common.ConvertData">
+            <summary>
+            数据转换类,此类定义了所有通用类型转换的方法
+            </summary>
+        </member>
+        <member name="M:Framework.Common.ConvertData.StringToEnum``1(System.String)">
+            <summary>
+            将字符串值转换为枚举,如果指定字符串不存在改枚举中则会引发异常
+            </summary>
+            <typeparam name="T">要转换的枚举类型</typeparam>
+            <param name="enumStr">参数:枚举字符串</param>
+            <returns>返回结果枚举</returns>
+        </member>
+        <member name="M:Framework.Common.ConvertData.DataRowToModel``1(System.Data.DataRow)">
+            <summary>
+            将DataRow转换为实体对象,如果实体类属性中不包含列则忽略
+            </summary>
+            <typeparam name="T">要返回的实体类型</typeparam>
+            <param name="dr">要转换的行对象</param>
+            <returns>返回实体对象</returns>
+        </member>
+        <member name="M:Framework.Common.ConvertData.DataTableToModel``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换为List集合
+            </summary>
+            <typeparam name="T">要返回的实体类型</typeparam>
+            <param name="dt">要转换的DataTable对象</param>
+            <returns>返回实体集合对象</returns>
+        </member>
+        <member name="M:Framework.Common.ConvertData.GetTypeByString(System.String)">
+            <summary>
+            根据字符串获取对应类型(Type)
+            </summary>
+            <param name="type">类型字符串</param>
+            <returns>返回类型</returns>
+        </member>
+        <member name="T:Framework.Common.CurrentStatus.LoginSystemDelegate">
+            <summary>
+            获得登录信息的委托
+            </summary>
+            <returns>返回操作员信息</returns>
+        </member>
+        <member name="T:Framework.Common.CurrentStatus.RunStatus">
+            <summary>
+            登录状态
+            </summary>
+        </member>
+        <member name="P:Framework.Common.CurrentStatus.RunStatus.CurrentOperator">
+            <summary>
+            当前操作员
+            </summary>
+        </member>
+        <member name="F:Framework.Common.CurrentStatus.RunStatus.IsDebug">
+            <summary>
+            判断程序是否以debug编译,默认是false
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Delegates.DbDataReaderHandle">
+            <summary>
+            DbDataReaderhandle读出一行数据的一个字段值后的处理委托
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="fieldValue">字段值</param>
+            <param name="isNewRow">是否新行,true:新行,false不是新行</param>
+        </member>
+        <member name="F:Framework.Common.Exceptions.CommonException.CommonDefaultFriendlyMessage">
+            <summary>
+            缺省的FriendlyMessage
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Exceptions.CommonException._friendlyMessage">
+            <summary>
+            显示给用户看的友好信息
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Exceptions.CommonException.#ctor">
+            <summary>
+            如果没有传入参数，使用Default值作为FriendlyMessage
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Exceptions.CommonException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message">需要记录在日志中的其他信息</param>
+        </member>
+        <member name="M:Framework.Common.Exceptions.CommonException.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="friendlyMessage">显示给用户看的友好信息</param>
+            <param name="message">需要记录在日志中的其他信息</param>
+        </member>
+        <member name="F:Framework.Common.Exceptions.DbDataException.Default">
+            <summary>
+            缺省的FriendlyMessage
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Exceptions.DbDataException.#ctor">
+            <summary>
+            如果没有传入任何参数，使用Default作为FriendlyMessage
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Exceptions.DbDataException.#ctor(System.String)">
+            <summary>
+            使用Default作为FriendlyMessage
+            </summary>
+            <param name="message">需要记录在日志中的其他信息</param>
+        </member>
+        <member name="M:Framework.Common.Exceptions.DbDataException.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="friendlyMessage">显示给用户看的友好信息</param>
+            <param name="message">需要记录在日志中的其他信息</param>
+        </member>
+        <member name="T:Framework.Common.Helpers.DateTimeHandle">
+            <summary>
+            获取当前时间的委托
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.RegisterGetCurrentTimeHandle(Framework.Common.Helpers.DateTimeHandle)">
+            <summary>
+            注册获取当前时间的委托方法
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.GetCurrentTime">
+            <summary>
+            获取当前时间,执行之前必须先注册获取当前时间的委托,
+            如果未注册当前获取时间的委托方法,那么则返回本地时间
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.StartTimer(System.Int32,Framework.Common.Helpers.DateTimeHelper.TimerDelegate)">
+            <summary>
+            计时方法,
+            判断某操作超时的方法
+            </summary>
+            <param name="intTime">即使毫秒数</param>
+            <param name="timerFunc">到时间后触发的方法</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.DateTimeFormatDate(System.DateTime,System.Int32)">
+            <summary>
+            将时间格式化成只有日期的形式输出
+            </summary>
+            <param name="sourceDate">要转换的时间</param>        
+            <param name="addDay">源时间增加的天数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.DateTimeFormatDate(System.DateTime)">
+            <summary>
+            将时间格式化成只有日期的形式输出
+            </summary>
+            <param name="sourceDate">要转换的时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.GetLocalTime">
+            <summary>
+            通过api获取本地时间
+            </summary>
+            <returns>返回c#时间类型</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.SetLocalTime(System.DateTime)">
+            <summary>
+            根据c#时间类型设置本地时间
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.DateTimeToTimestamp(System.DateTime)">
+            <summary>
+            DateTime时间格式转换为Unix时间戳格式,从1970.1.1 到当前时间的毫秒
+            </summary>
+            <param name="time"> DateTime时间格式</param>
+            <returns>Unix时间戳格式(毫秒)</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.GetTimeByTimestamp(System.Int64)">
+            <summary>
+            时间戳转换为时间
+            </summary>
+            <param name="timeStamp">时间戳（毫秒）</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.DateTimeHelper.GetWeekDay(System.DateTime)">
+            <summary>
+            根据日期获得星期，返回 日、一、二、三、四、五、六
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.DEncrypt">
+            <summary>
+            加解密,base64编码解码,md5 加密
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Encrypt(System.String)">
+            <summary>
+            使用缺省密钥字符串加密string
+            </summary>
+            <param name="original">明文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Decrypt(System.String)">
+            <summary>
+            使用缺省密钥字符串解密string
+            </summary>
+            <param name="original">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Encrypt(System.String,System.String)">
+            <summary>
+            使用给定密钥字符串加密string
+            </summary>
+            <param name="original">原始文字</param>
+            <param name="key">密钥</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Decrypt(System.String,System.String)">
+            <summary>
+            使用给定密钥字符串解密string
+            </summary>
+            <param name="original">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Decrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            使用给定密钥字符串解密string,返回指定编码方式明文
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Decrypt(System.Byte[])">
+            <summary>
+            使用缺省密钥字符串解密byte[]
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Encrypt(System.Byte[])">
+            <summary>
+            使用缺省密钥字符串加密
+            </summary>
+            <param name="original">原始数据</param>
+            <param name="key">密钥</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.MakeMD5(System.Byte[])">
+            <summary>
+            生成MD5摘要
+            </summary>
+            <param name="original">数据源</param>
+            <returns>摘要</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Encrypt(System.Byte[],System.Byte[])">
+            <summary>
+            使用给定密钥加密
+            </summary>
+            <param name="original">明文</param>
+            <param name="key">密钥</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.DEncrypt.Decrypt(System.Byte[],System.Byte[])">
+            <summary>
+            使用给定密钥解密数据
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.ExcelHelperNPOL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Helpers.ExcelHelperNPOL.X2003">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelperNPOL.X2003.ExcelToTableForXLS(System.String)">
+            <summary>
+            将Excel文件中的数据读出到DataTable中(xls)
+            </summary>/// <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelperNPOL.X2003.TableToExcelForXLS(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            将DataTable数据导出到Excel文件中(xls)
+            </summary>
+            <param name="dt"></param>
+            <param name="file"></param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelperNPOL.X2003.GetValueTypeForXLS(NPOI.HSSF.UserModel.HSSFCell)">
+            <summary>
+            获取单元格类型(xls)
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.ExcelHelperNPOL.X2007">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelperNPOL.X2007.ExcelToTableForXLSX(System.String)">
+            <summary>
+            将Excel文件中的数据读出到DataTable中(xlsx)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelperNPOL.X2007.TableToExcelForXLSX(System.Data.DataTable,System.String)">
+            <summary>
+            将DataTable数据导出到Excel文件中(xlsx)
+            </summary>
+            <param name="dt"></param>
+            <param name="file"></param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelperNPOL.X2007.GetValueTypeForXLSX(NPOI.XSSF.UserModel.XSSFCell)">
+            <summary>
+            获取单元格类型(xlsx)
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelReader.ToDataSet(System.String)">
+            <summary>
+            读取Excel文件到DataSet中
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.FileHelper">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.ImageToByteArray(System.Drawing.Image)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.ByteArrayToImage(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.IsStandardPicture(System.String)">
+            <summary>
+            用于判断档案中的照片文件大小 小于100K
+            </summary>
+            <param name="picPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.TextFileWrite(System.String,System.String)">
+            <summary>
+            指定内容写如文本文件,如果文件存在则打开不存在则创建
+            </summary>
+            <param name="fullPath">包含文件名的文件名</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.TextFileRead(System.String)">
+            <summary>
+            根据文件名读取文本文件内容
+            </summary>
+            <param name="fullPath">包含路径的完成文件名</param>
+            <returns>返回文本 内容</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.GetFileMD5Hex(System.String)">
+            <summary>
+            获得文件的MD5十六进制字符串
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.GetFileMD5Byte(System.String)">
+            <summary>
+            获得文件的MD5十六进制字符串
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.GetAllPaths(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            获得指定路径下的所有子目录
+            </summary>
+            <param name="pathList">用来输出的路径列表</param>
+            <param name="rootPath">要搜索的路径</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.CopyDir(System.String,System.String)">
+            <summary>
+            复制指定文件夹下的所有文件到指定文件夹,存在会替换
+            </summary>
+            <param name="sourceDir">要复制文件的目录</param>
+            <param name="targetDir">复制的目标文件夹</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.WriteBytesToFile(System.Byte[],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+            <param name="fullFileName"></param>
+        </member>
+        <member name="M:Framework.Common.Helpers.FileHelper.ReadBytes4File(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fullFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.FTPHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.FTPHelper.ftpURI">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>    
+            连接FTP服务器  
+            </summary>    
+            <param name="FtpServerIP">FTP连接地址</param>    
+            <param name="FtpRemotePath">指定FTP连接成功后的当前目录, 如果不指定即默认为根目录</param>    
+            <param name="FtpUserID">用户名</param>    
+            <param name="FtpPassword">密码</param>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.Upload(System.String)">
+            <summary>    
+            上传    
+            </summary>     
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.Download(System.String,System.String)">
+            <summary>    
+            下载    
+            </summary>     
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.Delete(System.String)">
+            <summary>    
+            删除文件    
+            </summary>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.GetFilesDetailList">
+            <summary>    
+            获取当前目录下明细(包含文件和文件夹)    
+            </summary>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.GetAllList(System.String)">
+            <summary>    
+            获取FTP文件列表(包括文件夹)  
+            </summary>     
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.GetFileList(System.String)">
+            <summary>    
+            获取当前目录下文件列表(不包括文件夹)    
+            </summary>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.FileExist(System.String)">
+            <summary>    
+            判断当前目录下指定的文件是否存在    
+            </summary>    
+            <param name="RemoteFileName">远程文件名</param>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.MakeDir(System.String)">
+            <summary>    
+            创建文件夹    
+            </summary>     
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.GetFileSize(System.String)">
+            <summary>    
+            获取指定文件大小    
+            </summary>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.ReName(System.String,System.String)">
+            <summary>    
+            更改文件名    
+            </summary>   
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.MovieFile(System.String,System.String)">
+            <summary>    
+            移动文件    
+            </summary>    
+        </member>
+        <member name="M:Framework.Common.Helpers.FTPHelper.GotoDirectory(System.String,System.Boolean)">
+            <summary>    
+            切换当前目录    
+            </summary>    
+            <param name="DirectoryName">t</param>     
+            <param name="IsRoot">true:绝对路径 false:相对路径</param>     
+        </member>
+        <member name="F:Framework.Common.Helpers.HardDiskInfo.ModuleNumber">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.HardDiskInfo.Firmware">
+            <summary>
+            固件版本
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.HardDiskInfo.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.HardDiskInfo.Capacity">
+            <summary>
+            容量，以M为单位
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Helpers.AtapiDevice">
+            <summary>
+            ATAPI驱动器相关
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.AtapiDevice.GetHddInfo(System.Byte)">
+            <summary>
+            获得硬盘信息
+            </summary>
+            <param name="driveIndex">硬盘序号</param>
+            <returns>硬盘信息</returns>
+            <remarks>
+            参考lu0的文章：http://lu0s1.3322.org/App/2k1103.html
+            by sunmast for everyone
+            thanks lu0 for his great works
+            在Windows 98/ME中，S.M.A.R.T并不缺省安装，请将SMARTVSD.VXD拷贝到%SYSTEM%\IOSUBSYS目录下。
+            在Windows 2000/2003下，需要Administrators组的权限。
+            </remarks>
+            <example>
+            AtapiDevice.GetHddInfo()
+            </example>
+        </member>
+        <member name="T:Framework.Common.Helpers.IdentityHelper">
+            <summary>
+            身份证信息
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.IdentityHelper.CheckID(System.String,System.String@)">
+            <summary>
+            检查身份证是否合法
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.GetCheckCode(System.Int32,System.Int32,System.Int32,System.String@)">
+            <summary>
+            随即获取验证码
+            </summary>
+            <param name="width">放验证码图片控件的宽度</param>
+            <param name="height">放验证码图片控件的高度</param>
+            <param name="codeLength">验证码的长度</param>
+            <param name="s">输出验证码的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.WriteString(System.Drawing.Image,System.String)">
+            <summary>
+            向图片上写文字再输出
+            </summary>
+            <param name="img"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.WriteImg(System.Drawing.Image,System.Drawing.Image)">
+            <summary>
+            将图片加载水印图片
+            </summary>
+            <param name="markImg">水印图片</param>
+            <param name="fromImg">原图</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.SmallBit(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            根据制定的高度和宽度改变图片大小
+            </summary>
+            <param name="img">图片源</param>
+            <param name="width">宽度像素</param>
+            <param name="heigth">高度像素</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.SmallBitByHeight(System.Drawing.Image,System.Int32)">
+            <summary>
+            根据指定高度改变图片大小
+            </summary>
+            <param name="img"></param>
+            <param name="heigth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.SmallBitByWidth(System.Drawing.Image,System.Int32)">
+            <summary>
+            根据指定宽度改变图片大小
+            </summary>
+            <param name="img"></param>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.SmallBitByRatio(System.Drawing.Image,System.Double)">
+            <summary>
+            根据比例改变图片大小
+            </summary>
+            <param name="img"></param>
+            <param name="ratio">比例大小如:0.5(百分之50)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.ReverseBit(System.Drawing.Image,System.Drawing.RotateFlipType)">
+            <summary>
+            旋转图片
+            </summary>
+            <param name="img"></param>
+            <param name="rf">要旋转的图片类型(枚举)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ImageHelper.SmallBitByCanva(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            根据画布大小比例得到图片
+            </summary>
+            <param name="img"></param>
+            <param name="cWidth"></param>
+            <param name="cHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.MoneyHelper">
+            <summary>
+            关于金额有关操作,如:金额大写
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.MoneyHelper.GetMoenyUpperCN(System.Double)">
+            <summary>
+            将金额转换为财务大写形式,只保留两位小数
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.MoneyHelper.GetMoneyUpperEN(System.Double)">
+            <summary>
+            将金额转换为财务大写形式,只保留两位小数(英文格式)
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Helpers.NumberHelper">
+            <summary>
+            数字转换类,定义了各进制转换等
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.NumberHelper._BaseNums">
+            <summary>
+            用来定义36进制的字符
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.NumberHelper.MoreScaleToInt(System.String,System.Int32)">
+            <summary>
+            将非10进制转换成10进制
+            </summary>
+            <param name="zex">多进制值</param>
+            <param name="convertType">指定进制类型</param>
+            <returns>内部无try操作</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.NumberHelper.IntToMoreScale(System.Int32,System.Int32)">
+            <summary>
+            10进制转换成多进制
+            </summary>
+            <param name="num">10进制数值</param>
+            <param name="convertType">多进制类型</param>
+            <returns>输出字符串</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.NumberHelper.HexToByteArr(System.String)">
+            <summary>
+            将16进制字符串转换成byte数组,每2个字符转换为1个byte
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.NumberHelper.ByteArrToHex(System.Byte[])">
+            <summary>
+            字节数组转换成十六进制字符串
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.NumberHelper.ByteArrToHex(System.Byte[],System.Boolean)">
+            <summary>
+            字节数组转换成十六进制字符串,指定是否每个字节加一个空格
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.NumberHelper.ByteArrToInt32(System.Byte[])">
+            <summary>
+            字节数组转换为int32
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Helpers.ReflectionHelper">
+            <summary>
+            反射操作的封装
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.GetPropertyInfo``1">
+            <summary>
+            获得对象的所有公共属性信息
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="obj">获得的对象</param>
+            <returns>返回属性信息</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.GetPropertyInfo``1(System.String)">
+            <summary>
+            根据属性名获取属性信息
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="obj">源对象</param>
+            <param name="pName">属性名称</param>
+            <returns>返回属性类型对象</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.GetPropertyNames``1">
+            <summary>
+            获得对象的所有公共属性的属性名
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.GetPropertyNames(System.Type)">
+            <summary>
+            根据对象类型获取所有公共属性名
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.GetPropertyNameAndValue``1(``0)">
+            <summary>
+            获得对象的属性名和属性值
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.SetPropertyValue``1(``0,System.Object)">
+            <summary>
+            根据一个源对象赋值属性内容到一个目标对象中,
+            即:如果sourceObj对象和targetObj对象属性相同则赋值,可用于视图转换表实体的应用
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.SetPropertyValue``1(``0,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            根据属性名设置对象的 属性值
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.SetPropertyValue``1(``0,System.Data.DataRow)">
+            <summary>
+            根据一个DataRow对象设置对象的属性值
+            </summary>
+            <typeparam name="T">可实例化的一个类</typeparam>
+            <param name="dr">数据航</param>
+            <returns>返回T</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.SetPropertyValue``1(``0,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            根据类型设置对象的默认属性值
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.SetPropertyNullValue``1(``0,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            根据类型设置对象的空值的默认值
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.CreateInstanc``1(System.String,System.String)">
+            <summary>
+            反射创建一个对象
+            </summary>
+            <typeparam name="T">要创建对象的类型</typeparam>
+            <param name="assemblyName">项目名称(程序集名称,dll文件名)</param>
+            <param name="typeName">类型名称,类的类型</param>
+            <returns>返回一个T对象</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper.GetCustomAttribute``1(System.Reflection.PropertyInfo)">
+            <summary>
+            获得指定成员的特性对象
+            </summary>
+            <typeparam name="T">要获取属性的类型</typeparam>
+            <param name="pInfo">属性原型</param>
+            <returns>返回T对象</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper`1.GetPropertyInfo(`0)">
+            <summary>
+            获得对象的所有公共属性
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper`1.GetPropertyNames(`0)">
+            <summary>
+            获得对象的所有公共属性的属性名
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper`1.GetPropertyNameAndValu(`0)">
+            <summary>
+            获得对象的属性名和属性值
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ReflectionHelper`1.SetPropertyValue(`0,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            设置对象的 属性值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Framework.Common.Helpers.RegexHelper.GetMatch(System.String,System.String)">
+            <summary>
+            根据正则表达式取得 一条匹配的分组列表,如只有1条则表示并没有分组
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.Helpers.RegexHelper.GetMatch(System.String,System.String,System.Int32)">
+            <summary>
+            获得指定分组索引的匹配字符串
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.Helpers.RegexHelper.GetAllMatchAndGroup(System.String,System.String)">
+            <summary>
+            根据正则表达式获得所有匹配项且包含所有匹配项的分组集
+            </summary>        
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Framework.Common.Helpers.RegexHelper.GetAllMatchAndGroup(System.String,System.String,System.Int32)" -->
+        <member name="M:Framework.Common.Helpers.RegexHelper.ReplaceStr(System.String,System.String,System.String)">
+            <summary>
+            替换指定字符串
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.RegexHelper.Check(System.String,System.String)">
+            <summary>
+            验证字符串是否匹配正则规则
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.SerializesHelper.SerializeByBinary(System.Object)">
+            <summary>
+            二进制序列化
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.SerializesHelper.DeSerializeByBinary``1(System.Byte[])">
+            <summary>
+            二进制反序列化
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.SerializesHelper.SerializeByXml``1(``0)">
+            <summary>
+            将对象序列化成xml对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.SerializesHelper.DeSerializeByXml``1(System.Byte[])">
+            <summary>
+            将xml流发序列化成对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.SerializesHelper.SerializeDataTableXml(System.Data.DataTable)">
+            <summary>
+            序列化DataTable
+            </summary>
+            <param name="pDt">包含数据的DataTable</param>
+            <returns>序列化的DataTable</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.SerializesHelper.DeserializeDataTable(System.String)">
+            <summary>
+            反序列化DataTable
+            </summary>
+            <param name="pXml">序列化的DataTable</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.GetPinYin(System.String,System.Boolean)">
+            <summary>
+            获取汉子的拼音
+            </summary>
+            <param name="hz">汉字</param>
+            <param name="isSimple">是否是简拼  true: 为简拼,false为全拼</param>        
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.GetPinYin(System.String)">
+            <summary>
+            获取汉子的简拼
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.MD5EnString(System.String)">
+            <summary>
+            获得MD5加密字符串
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.MD5EnString(System.String,System.String)">
+            <summary>
+            获得MD5加密字符串(指定编码)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.GetRoamdNumberStr(System.String,System.Int32)">
+            <summary>
+            获得随机数字，指定长度（Md5）,有重复可能
+            </summary>
+            <param name="baseStr">要转换的动态基数</param>
+            <param name="resultLen">输出字符串的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.MakeMD5(System.Byte[])">
+            <summary>
+            生成MD5摘要
+            </summary>
+            <param name="original">数据源</param>
+            <returns>摘要</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Encrypt(System.Byte[],System.Byte[])">
+            <summary>
+            使用给定密钥加密
+            </summary>
+            <param name="original">明文</param>
+            <param name="key">密钥</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Decrypt(System.Byte[],System.Byte[])">
+            <summary>
+            使用给定密钥解密数据
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Encrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            使用给定密钥字符串加密string
+            </summary>
+            <param name="original">原始文字</param>
+            <param name="key">密钥</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Encrypt(System.String,System.String)">
+            <summary>
+            使用给定密钥字符串加密,默认为Default编码
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            指定编码格式,进行base64加密
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Encrypt(System.String)">
+            <summary>
+            使用Base64编码字符加密(默认编码:Default)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Decrypt(System.String,System.String)">
+            <summary>
+            使用给定密钥字符串解密string
+            </summary>
+            <param name="original">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Decrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            使用给定密钥字符串解密string,返回指定编码方式明文
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Decrypt(System.String)">
+            <summary>
+            使用Base64解码(默认编码:Default)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.Base64Decrypt(System.String,System.Text.Encoding)">
+            <summary>
+            指定编码格式 Base64解码
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.SHA1Encrypt(System.String)">
+            <summary>
+            sha1加密(默认编码utf-8)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.SHA1Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            sha1加密指定编码
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.StringEquals(System.String,System.String)">
+            <summary>
+            比较两个字符串，不区分大小写且不计算前后空格
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.StringHelper.IsNullOrWhiteSpace(System.String[])">
+            <summary>
+            判断所有字符串是否为空，只有其中一个为null或空字符串则返回true
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Helpers.SysApiHelper">
+            <summary>
+            有相关操作系统Api的封装类
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.SysApiHelper.GetLocalTime">
+            <summary>
+            通过api获取本地时间
+            </summary>
+            <returns>返回c#时间类型</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.SysApiHelper.SetLocalTime(System.DateTime)">
+            <summary>
+            根据c#时间类型设置本地时间
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Helpers.XmlHelper">
+            <summary>
+            XmlHelper 的摘要说明
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.XmlHelper.Read(System.String,System.String,System.String)">
+            <summary>
+            读取数据        
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时返回该属性值，否则返回串联值</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.XmlHelper.Insert(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            插入数据,如果 path 文件不存在则创建        
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="element">元素名，非空时插入新元素，否则在该元素中插入属性</param>
+            <param name="attribute">属性名，非空时插入该元素属性值，否则插入元素值</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.XmlHelper.Insert(System.String,System.String,System.String,System.String)">
+            <summary>
+            在根节点创建元素
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.Helpers.XmlHelper.Update(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改数据        
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时修改该节点属性值，否则修改节点值</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.XmlHelper.Delete(System.String,System.String,System.String)">
+            <summary>
+            删除数据        
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时删除该节点属性值，否则删除节点值</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Common.Helpers.ExcelHelper">
+            <summary>
+            Excel操作类
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.ExcelHelper._beforeTime">
+            <summary>
+            Excel启动之前时间(用于结束进程判断)
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Helpers.ExcelHelper._afterTime">
+            <summary>
+            Excel启动之后时间(用于结束进程判断)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.#ctor(System.String,System.Object,System.Boolean)">
+            <summary>
+            构造函数，打开一个已有的工作簿
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="sheets">工作表,可以是索引(从1开始),可以是工作表名称</param>
+            <param name="isVisible">是否显示工作表</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.#ctor(System.String)">
+            <summary>
+            构造函数，打开一个已有的工作簿,默认不显示工作表,并将第一个工作表设置当前工作表
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.#ctor(System.Boolean)">
+            <summary>
+            构造函数，新建一个工作簿
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Helpers.ExcelHelper.IsKillExcelProcess">
+            <summary>
+            保存文件后是否杀掉excel进程，win10系统无权限会异常
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.SetCellValue(System.Int32,System.Int32,System.String)">
+            <summary>
+            向单元格写入数据，对当前WorkSheet操作
+            </summary>
+            <param name="rowIndex">行索引</param>
+            <param name="columnIndex">列索引</param>
+            <param name="text">要写入的文本值</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.SetCellValue(System.String,System.String)">
+            <summary>
+            根据当前单元格名称设置单元格内容
+            </summary>
+            <param name="cellName"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.GetCellValue(System.Int32,System.Int32)">
+            <summary>
+            根据索引获取单元格值
+            </summary>
+            <param name="rowIndex">行索引</param>
+            <param name="columnIndex">列索引</param>
+            <returns>返回object,通常是string</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.GetCellValue(System.String)">
+            <summary>
+            根据单元格名称读取Excel单元格内容
+            </summary>
+            <param name="cellName">单元格名称</param>
+            <returns>返回内容</returns>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.MergeCells(System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            合并单元格，并赋值，对指定WorkSheet操作
+            </summary>
+            <param name="beginRowIndex">开始行索引</param>
+            <param name="beginColumnIndex">开始列索引</param>
+            <param name="endRowIndex">结束行索引</param>
+            <param name="endColumnIndex">结束列索引</param>
+            <param name="text">合并后Range的值</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.ChangeCurrentWorkSheet(System.Int32)">
+            <summary>
+            改变当前工作表
+            </summary>
+            <param name="sheetIndex">工作表索引</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.ModifySheetName(System.String)">
+            <summary>
+            改变当前工作表的名字
+            </summary>
+            <param name="sheetName">修改的工作表</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.PreviewFile">
+            <summary>
+            预览文件
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.SaveFile">
+            <summary>
+            保存文件
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.OutputExcelFile(System.String)">
+            <summary>
+            输出Excel文件并退出
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.SaveAsFile(System.String,System.String)">
+            <summary>        
+            将Excel文件另存为指定格式        
+            </summary>
+            <param name="outputFile">输出文件</param>
+            <param name="format">HTML，CSV，TEXT，EXCEL，XML</param>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.KillExcelProcess">
+            <summary>
+            结束Excel进程
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Helpers.ExcelHelper.Dispose">
+            <summary>
+            释放所有excel操作的对象,并结束Excel进程
+            </summary>
+        </member>
+        <member name="T:Framework.Common.HttpHelper">
+            <summary>
+            Http连接操作帮助类
+            </summary>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.GetHtml(Framework.Common.HttpItem)">
+            <summary>
+            根据相传入的数据，得到相应页面数据
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.GetData(Framework.Common.HttpItem,Framework.Common.HttpResult)">
+            <summary>
+            获取数据的并解析的方法
+            </summary>
+            <param name="item"></param>
+            <param name="result"></param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetEncoding(Framework.Common.HttpItem,Framework.Common.HttpResult,System.Byte[])">
+            <summary>
+            设置编码
+            </summary>
+            <param name="item">HttpItem</param>
+            <param name="result">HttpResult</param>
+            <param name="ResponseByte">byte[]</param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.GetByte">
+            <summary>
+            提取网页Byte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.GetMemoryStream(System.IO.Stream)">
+            <summary>
+            4.0以下.net版本取数据使用
+            </summary>
+            <param name="streamResponse">流</param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetRequest(Framework.Common.HttpItem)">
+             <summary>
+             为请求准备参数
+             </summary>
+            <param name="item">参数列表</param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetCer(Framework.Common.HttpItem)">
+            <summary>
+            设置证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetCerList(Framework.Common.HttpItem)">
+            <summary>
+            设置多个证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetCookie(Framework.Common.HttpItem)">
+            <summary>
+            设置Cookie
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetPostData(Framework.Common.HttpItem)">
+            <summary>
+            设置Post数据
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.SetProxy(Framework.Common.HttpItem)">
+            <summary>
+            设置代理
+            </summary>
+            <param name="item">参数对象</param>
+        </member>
+        <member name="M:Framework.Common.HttpHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            回调验证证书问题
+            </summary>
+            <param name="sender">流对象</param>
+            <param name="certificate">证书</param>
+            <param name="chain">X509Chain</param>
+            <param name="errors">SslPolicyErrors</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Framework.Common.HttpItem">
+            <summary>
+            Http请求参考类
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.URL">
+            <summary>
+            请求URL必须填写
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Method">
+            <summary>
+            请求方式默认为GET方式,当为POST方式时必须设置Postdata的值
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Timeout">
+            <summary>
+            默认请求超时时间
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ReadWriteTimeout">
+            <summary>
+            默认写入Post数据超时间
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.KeepAlive">
+            <summary>
+             获取或设置一个值，该值指示是否与 Internet 资源建立持久性连接默认为true。
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Accept">
+            <summary>
+            请求标头值 默认为text/html, application/xhtml+xml, */*
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ContentType">
+            <summary>
+            请求返回类型默认 text/html
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.UserAgent">
+            <summary>
+            客户端访问信息默认Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Encoding">
+            <summary>
+            返回数据编码默认为NUll,可以自动识别,一般为utf-8,gbk,gb2312
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.PostDataType">
+            <summary>
+            Post的数据类型
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Postdata">
+            <summary>
+            Post请求时要发送的字符串Post数据
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.PostdataByte">
+            <summary>
+            Post请求时要发送的Byte类型的Post数据
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.WebProxy">
+            <summary>
+            设置代理对象，不想使用IE默认配置就设置为Null，而且不要设置ProxyIp
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Cookie">
+            <summary>
+            请求时的Cookie
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Referer">
+            <summary>
+            来源地址，上次访问地址
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.CerPath">
+            <summary>
+            证书绝对路径
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.IsToLower">
+            <summary>
+            是否设置为全文小写，默认为不转化
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Allowautoredirect">
+            <summary>
+            支持跳转页面，查询结果将是跳转后的页面，默认是不跳转
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Connectionlimit">
+            <summary>
+            最大连接数
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ProxyUserName">
+            <summary>
+            代理Proxy 服务器用户名
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ProxyPwd">
+            <summary>
+            代理 服务器密码
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ProxyIp">
+            <summary>
+            代理 服务IP ,如果要使用IE代理就设置为ieproxy
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ResultType">
+            <summary>
+            设置返回类型String和Byte
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Framework.Common.HttpItem.ProtocolVersion" -->
+        <member name="P:Framework.Common.HttpItem.Expect100Continue">
+            <summary>
+             获取或设置一个 System.Boolean 值，该值确定是否使用 100-Continue 行为。如果 POST 请求需要 100-Continue 响应，则为 true；否则为 false。默认值为 true。
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ClentCertificates">
+            <summary>
+            设置509证书集合
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.PostEncoding">
+            <summary>
+            设置或获取Post参数编码,默认的为Default编码
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ResultCookieType">
+            <summary>
+            Cookie返回类型,默认的是只返回字符串类型
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.ICredentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.MaximumAutomaticRedirections">
+            <summary>
+            设置请求将跟随的重定向的最大数目
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpItem.IfModifiedSince">
+            <summary>
+            获取和设置IfModifiedSince，默认为当前日期和时间
+            </summary>
+        </member>
+        <member name="T:Framework.Common.HttpResult">
+            <summary>
+            Http返回参数类
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.Cookie">
+            <summary>
+            Http请求返回的Cookie
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.Html">
+            <summary>
+            返回的String类型数据 只有ResultType.String时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.ResultByte">
+            <summary>
+            返回的Byte数组 只有ResultType.Byte时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.StatusDescription">
+            <summary>
+            返回状态说明
+            </summary>
+        </member>
+        <member name="P:Framework.Common.HttpResult.StatusCode">
+            <summary>
+            返回状态码,默认为OK
+            </summary>
+        </member>
+        <member name="T:Framework.Common.ResultType">
+            <summary>
+            返回类型
+            </summary>
+        </member>
+        <member name="F:Framework.Common.ResultType.String">
+            <summary>
+            表示只返回字符串 只有Html有数据
+            </summary>
+        </member>
+        <member name="F:Framework.Common.ResultType.Byte">
+            <summary>
+            表示返回字符串和字节流 ResultByte和Html都有数据返回
+            </summary>
+        </member>
+        <member name="T:Framework.Common.PostDataType">
+            <summary>
+            Post的数据格式默认为string
+            </summary>
+        </member>
+        <member name="F:Framework.Common.PostDataType.String">
+            <summary>
+            字符串类型，这时编码Encoding可不设置
+            </summary>
+        </member>
+        <member name="F:Framework.Common.PostDataType.Byte">
+            <summary>
+            Byte类型，需要设置PostdataByte参数的值编码Encoding可设置为空
+            </summary>
+        </member>
+        <member name="F:Framework.Common.PostDataType.FilePath">
+            <summary>
+            传文件，Postdata必须设置为文件的绝对路径，必须设置Encoding的值
+            </summary>
+        </member>
+        <member name="T:Framework.Common.ResultCookieType">
+            <summary>
+            Cookie返回类型
+            </summary>
+        </member>
+        <member name="F:Framework.Common.ResultCookieType.String">
+            <summary>
+            只返回字符串类型的Cookie
+            </summary>
+        </member>
+        <member name="F:Framework.Common.ResultCookieType.CookieCollection">
+            <summary>
+            CookieCollection格式的Cookie集合同时也返回String类型的cookie
+            </summary>
+        </member>
+        <member name="T:Framework.Common.LogHelper">
+            <summary>
+            日志的相关操作
+            </summary>
+        </member>
+        <member name="M:Framework.Common.LogHelper.WriteLog(System.String,System.String)">
+            <summary>
+            写日志,指定文件夹写日志内容
+            </summary>
+            <param name="folder">文件夹</param>
+            <param name="logContent">日志内容</param>
+        </member>
+        <member name="M:Framework.Common.LogHelper.WriteLog(System.String)">
+            <summary>
+            写日志,指定文件夹写日志内容,默认路径是:Log文件夹
+            </summary>
+            <param name="logContent">日志内容</param>
+        </member>
+        <member name="P:Framework.Common.LogHelper.LogObj">
+            <summary>
+            log4net方式的记录日志
+            如果需要捕获到具体的方法及代码行,需要直接使用Ilog,而不能分支出来的方法
+            web项目使用,需要在 AssemblyInfo.cs 配置　[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]        
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.IOperator.GetOperatorId">
+            <summary>
+            获得操作员Id
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.IOperator.GetOperatorName">
+            <summary>
+            获得操作员名称
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Models.ISearch">
+            <summary>
+            2014.7.11 改对象正确含义应该是SearchHelper
+            排序加了进去,不仅仅处理Where条件哦
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.ToString">
+            <summary>
+            返回where条件及排序条件(合并排序条件在此生效)
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch._LastParamIndex">
+            <summary>
+            参数名的索引名
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch._WhereText">
+            <summary>
+            where文本
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch._ParamDict">
+            <summary>
+            参数字典列表
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch._OrderByText">
+            <summary>
+            排序字符串,在tostring时才增加到文本最后
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch._Tag">
+            <summary>
+            备注标记,记录一个键的标识,如记录已经添加某条件后不再重复添加
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.WhereTextStr">
+            <summary>
+            获取where条件的字符串
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.OrderByTextStr">
+            <summary>
+            获取排序的字符串(含order by)
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.ParamDict">
+            <summary>
+            返回当前对象所有产品参数集合字典,key:参数数名(包含@),value:参数值
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.WhereText">
+            <summary>
+            返回当前生成where文本,可对文本进行append操作
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch._ParamNameKey">
+            <summary>
+            参数名的基础字符
+            如需合并两个ISearch对象时用到,参数名不能重复
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.ParamNameKey">
+            <summary>
+            参数名的基础字符
+            如需合并两个ISearch对象时用到,参数名不能重复
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.Tag">
+            <summary>
+            备注标记,记录一个键的标识,如记录已经添加某条件后不再重复添加
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.ParamSignStr">
+            <summary>
+            参数符号字符串
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ISearch.FormatFieldNameFun">
+            <summary>
+            格式化字段格式的委托方法
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.PageNo">
+            <summary>
+            分页查询时页码,如果小于0则返回1
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.OnePage">
+            <summary>
+            分页查询时每页显示数(默认0不分页)
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.RecordCount">
+            <summary>
+            分页查询时输出的记录数
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.PageCount">
+            <summary>
+            分页查询时出书的页数
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ISearch.IsUsePage">
+            <summary>
+            是否使用分页了,如果OnePage为0,则不启用分页
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.MergeWhereSearch(Framework.Common.Models.ISearch)">
+            <summary>
+            加入一个Search对象的Where条件合并到当前ISearch对象中,
+            创建Search后需要设置ParamNameKey值,该不能重复,初始值为Empty
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.CloneISearch(Framework.Common.Models.ISearch)">
+            <summary>
+            克隆一个ISearch对象,因为创建问题,输入一个实例化的空ISearch对象,赋值后返回
+            </summary>
+            <param name="wh">输出的ISearch对象</param>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.Clone">
+            <summary>
+            克隆一个ISearch对象,因为创建问题,输入一个实例化的空ISearch对象,赋值后返回
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.SetOrderText(System.String,System.Boolean)">
+            <summary>
+            设置配需sql文,从现在开始,改对象名字其实应该叫做SearchHelper,ISearch已经合适了2014.7.11
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.AddParamGetParamName(System.Object)">
+            <summary>
+            增加查询参数,并得到参数名,参数名会根据LastParamIndex递增
+            </summary>
+            <param name="v">参数值</param>
+            <returns>返回参数名</returns>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.FormatFieldName(System.String)">
+            <summary>
+            格式化字段名的方法,默认为不格式化
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.AndWhere(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            增加一个where文本和参数到该查询中,可用于扩展Lambda
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.Clear">
+            <summary>
+            清除where文本内容,参数内容和排序内容
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.AddParam(System.Object)">
+            <summary>
+            增加一个参数,自动获得参数名及增加参数
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.Add(System.String)">
+            <summary>
+            当前where文本增加字符(通常该值是 字段名 ),返回当前对象
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.AddSearchObj(Framework.Common.Models.ISearch)">
+            <summary>
+            合并一个ISearch,并用and连接起来,并在前后语句加上括号
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.Equal(System.Object)">
+            <summary>
+            比较符,等于 "="
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.EqualNot(System.Object)">
+            <summary>
+            比较符,不等于 "!="
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.GreaterThan(System.Object)">
+            <summary>
+            比较符,大于 ">"
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.LessThan(System.Object)">
+            <summary>
+            比较符,小于
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.GreaterThenEqual(System.Object)">
+            <summary>
+            比较符,大于等于
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.LessThanEqual(System.Object)">
+            <summary>
+            比较符,小于等于
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.IsNull">
+            <summary>
+            是否空
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.IsNotNull">
+            <summary>
+            是否非空
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.In(System.Object[])">
+            <summary>
+            比较符,In,参数为某范围内的比较值
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.NotIn(System.Object[])">
+            <summary>
+            比较符,NotIn
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.LikeLeft(System.String)">
+            <summary>
+            比较符 left Like %{0}
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.LikeRight(System.String)">
+            <summary>
+            比较符 right like {0}%
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.LikeFull(System.String)">
+            <summary>
+            比较符 full like
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.BracketLeft">
+            <summary>
+            增加一个左括号 "("
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.BracketLeft(System.String)">
+            <summary>
+            增加一个左括号"(",再加一个字符串(通常是一个字段)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.BracketRight">
+            <summary>
+            增加一个右括号 ")"
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.BracketRight(System.String)">
+            <summary>
+            增加一个右括号")",再加一个字符串(通常是一个字段)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.And">
+            <summary>
+            增加连接符 "and"
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.And(System.String)">
+            <summary>
+            增加连接符 "and"
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.Or">
+            <summary>
+            增加连接符 "or"
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.Or(System.String)">
+            <summary>
+            增加连接符"or",再加一个字符串(通常是一个字段)
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.AddGroup">
+            <summary>
+            如果有内容增加一组括号,即在首位加"(" ,末尾加 ")"
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.OrderByAsc(System.String)">
+            <summary>
+            设置指定字段按升序排序
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ISearch.OrderByDesc(System.String)">
+            <summary>
+            设置指定字段按降序排序
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Models.ProcedureModel.ProcedureObjBase">
+            <summary>
+            存储过程使用的基类,继承类名必须以"Proc_"开头
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ProcedureModel.ProcedureObjBase.ToString">
+            <summary>
+            重新父类的ToString,返回存储过程名,不包含前缀"Proc_"
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.ProcedureModel.ProcedureObjBase._OutAttrParamDict">
+            <summary>
+            输出参数的属性字典,key包含@
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ProcedureModel.ProcedureObjBase.GetProcParamObj">
+            <summary>
+            获得存储过程参数集合
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ProcedureModel.ProcedureObjBase.SetOutParam(System.Data.Common.DbParameter[]@)">
+            <summary>
+            根据数据库参数,设置参数的输出选项
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.ProcedureModel.ProcedureObjBase.SetOutParamValue(System.Data.Common.DbParameter[])">
+            <summary>
+            给当前对象设置输出参数的值
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Models.ProcedureModel.ProcedureOutParamAttribute">
+            <summary>
+            存储过程参数的特性类
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ProcedureModel.ProcedureOutParamAttribute.ParamDirection">
+            <summary>
+            存储过程输出参数的方向类型
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.ProcedureModel.ProcedureOutParamAttribute.OutSize">
+            <summary>
+            输出参数的字节数,默认50个字节
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Models.TableModel.ModelAnaly">
+            <summary>
+            Model实体的解析接口
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Models.TableModel.ModelAnaly._ModelAttributeCache">
+            <summary>
+            实体类缓存,静态变量是保存为了减少反射次数
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.TableModel.ModelAnaly.ModelAttributeCache">
+            <summary>
+            实体类缓存,静态变量是保存为了减少反射次数
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.TableModel.ModelAnaly.GetModelAttribute``1">
+            <summary>
+            获取Model的属性对象,获取第一次后会放入一个缓存列表中
+            即只反射一次
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.TableModel.ModelAnaly.GetModelParam``1">
+            <summary>
+            通过解析获得Model的对象的参数,Key:为类的属性名
+            </summary>
+            <param name="model">model对象</param>
+            <returns>返回model参数</returns>
+        </member>
+        <member name="M:Framework.Common.Models.TableModel.ModelAnaly.GetTableName``1">
+            <summary>
+            根据Model类型获取表名
+            </summary>
+        </member>
+        <member name="T:Framework.Common.Models.TableModel.ModelAnalyReflect">
+            <summary>
+            使用反射来解析Model
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.TableModel.ModelAnalyReflect.GetTableName``1">
+            <summary>
+            获取表名
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.TableModel.ModelAnalyReflect.GetModelParam``1">
+            <summary>
+            通过解析获得Model的对象的参数,Key:为类的属性名
+            </summary>
+            <param name="model">model对象</param>
+            <returns>返回model参数</returns>
+        </member>
+        <member name="P:Framework.Common.Models.TableModel.ModelAttribute.IsPrimaryKey">
+            <summary>
+            是否主键
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.TableModel.ModelAttribute.IsIdentity">
+            <summary>
+            主键是否自动增长
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.TableModel.ModelAttribute.IsNotNull">
+            <summary>
+            是否非空字段
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Models.TableModel.ModelAttribute.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="M:Framework.Common.Models.TableModel.ModelBase.ToString">
+            <summary>
+            重写了ToString获得类的名称,不含命名空间
+            </summary>
+        </member>
+        <member name="T:Framework.Common.StringPlus">
+            <summary>
+            高效字符串处理,封装了StringBuilder的几个方法
+            </summary>
+        </member>
+        <member name="M:Framework.Common.StringPlus.Clear">
+            <summary>
+            清空文本所有内容
+            </summary>
+        </member>
+        <member name="M:Framework.Common.StringPlus.Append(System.String,System.Object[])">
+            <summary>
+            正常增加文本
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.StringPlus.AppendLine">
+            <summary>
+            增加一个换行
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.StringPlus.AppendLine(System.String,System.Object[])">
+            <summary>
+            增加文本+换行
+            </summary>
+        </member>
+        <member name="M:Framework.Common.StringPlus.AppendSpace(System.Int32,System.String,System.Object[])">
+            <summary>
+            增加指定数量的TAB+文本
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.StringPlus.AppendSpaceLine(System.Int32,System.String,System.Object[])">
+            <summary>
+            增加指定数量的TAB+文本+换行
+            </summary>        
+        </member>
+        <member name="M:Framework.Common.StringPlus.DelLastChar(System.String,System.Boolean)">
+            <summary>
+            删除最后一个指定字符
+            </summary>
+            <param name="strchar">要删除的字符</param>
+            <param name="isOnlyLast">是否仅删除最后一个字符，中间位置的指定字符不删除</param>
+        </member>
+        <member name="M:Framework.Common.StringPlus.DelLastComma">
+            <summary>
+            去除最后一个逗号
+            </summary>
+        </member>
+        <member name="M:Framework.Common.StringPlus.Remove(System.Int32,System.Int32)">
+            <summary>
+            删除指定字符 
+            </summary>
+        </member>
+        <member name="M:Framework.Common.StringPlus.Space(System.Int32)">
+            <summary>
+            增加指定数量TAB
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Validation.ValidationModel.ValidObject">
+            <summary>
+            要验证的值
+            </summary>
+        </member>
+        <member name="P:Framework.Common.Validation.ValidationModel.ErrMessage">
+            <summary>
+            出错后显示的错误消息
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Validation.ValidTypeEnum.None">
+            <summary>
+            不做验证
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Validation.ValidTypeEnum.NotNull">
+            <summary>
+            非空验证
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Validation.ValidTypeEnum.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Validation.ValidTypeEnum.EqualToRegex">
+            <summary>
+            匹配该正则表达式
+            </summary>
+        </member>
+        <member name="F:Framework.Common.Validation.ValidTypeEnum.EqualNotRegex">
+            <summary>
+            该表达式除外
+            </summary>
+        </member>
+        <member name="T:ChinaDate">
+            <summary>
+            中国农历
+            </summary>
+            日期：2011-01-13
+            作者：http://www.cnblogs.com/zjfree/
+        </member>
+        <member name="M:ChinaDate.GetChinaDate(System.DateTime)">
+            <summary>
+            获取农历
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChinaDate.GetYear(System.DateTime)">
+            <summary>
+            获取农历年份
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChinaDate.GetMonth(System.DateTime)">
+            <summary>
+            获取农历月份
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChinaDate.GetDay(System.DateTime)">
+            <summary>
+            获取农历日期
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChinaDate.GetSolarTerm(System.DateTime)">
+            <summary>
+            获取节气
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChinaDate.GetHoliday(System.DateTime)">
+            <summary>
+            获取公历节日
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChinaDate.GetChinaHoliday(System.DateTime)">
+            <summary>
+            获取农历节日
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF89E385-7F12-4B3F-B558-7B54C28EDC4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00项目引用\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite, Version=1.0.93.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00项目引用\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildSQLText\BuildMySql.cs" />
+    <Compile Include="BuildSQLText\BuildOleDb.cs" />
+    <Compile Include="BuildSQLText\BuildOracle.cs" />
+    <Compile Include="BuildSQLText\ISqlBuilder.cs" />
+    <Compile Include="BuildSQLText\SqlBuilder.cs" />
+    <Compile Include="BuildSQLText\BuildSQLite.cs" />
+    <Compile Include="BuildSQLText\BuildSQLServer.cs" />
+    <Compile Include="ContextFactory.cs" />
+    <Compile Include="Core\ICondition.cs" />
+    <Compile Include="Core\IDBContext.cs" />
+    <Compile Include="Core\IExecResult.cs" />
+    <Compile Include="Core\IProcResult.cs" />
+    <Compile Include="Core\IQueryResult.cs" />
+    <Compile Include="Core\IScalarResult.cs" />
+    <Compile Include="DBHelper\DbHelperBase.cs" />
+    <Compile Include="DBHelper\FrameDbException.cs" />
+    <Compile Include="DBHelper\IDbHelper.cs" />
+    <Compile Include="DBHelper\MySqlDbHelper.cs" />
+    <Compile Include="DBHelper\OleDbHelper.cs" />
+    <Compile Include="DBHelper\OracleHelper.cs" />
+    <Compile Include="DBHelper\SQLHelper.cs" />
+    <Compile Include="DBHelper\SQLiteHelper.cs" />
+    <Compile Include="BuildSQLText\BuildSQLBase.cs" />
+    <Compile Include="Core\DBContext.cs" />
+    <Compile Include="Core\IDBContext~.cs" />
+    <Compile Include="EmDatabaseType.cs" />
+    <Compile Include="EmOrderByType.cs" />
+    <Compile Include="EmWhereJoin.cs" />
+    <Compile Include="Entitys\EntityAnalyReflect.cs" />
+    <Compile Include="Entitys\EntityBase.cs" />
+    <Compile Include="Entitys\EntityAnaly.cs" />
+    <Compile Include="Entitys\EntityAttribute.cs" />
+    <Compile Include="Entitys\IEntityAnaly.cs" />
+    <Compile Include="Entitys\ProcedureEntiryBase.cs" />
+    <Compile Include="ExpressionAnaly\ExprAnalyBase.cs" />
+    <Compile Include="ExpressionAnaly\IExpressionAnaly.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

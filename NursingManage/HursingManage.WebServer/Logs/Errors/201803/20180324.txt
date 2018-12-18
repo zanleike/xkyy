@@ -1,0 +1,12 @@
+[10:10:29.751][ERROR][8]:写数据库日志出错!
+System.FormatException: 索引(从零开始)必须大于或等于零，且小于参数列表的大小。
+   在 System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.Format(String format, Object[] args)
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 277
+[10:11:15.571][ERROR][5]:写数据库日志出错!
+System.FormatException: 索引(从零开始)必须大于或等于零，且小于参数列表的大小。
+   在 System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   在 System.String.Format(String format, Object[] args)
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 G:\code\NursingManage\HursingManage.AL\ALBase.cs:行号 277

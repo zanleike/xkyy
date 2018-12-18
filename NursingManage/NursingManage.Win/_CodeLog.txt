@@ -1,0 +1,151 @@
+2017.10.10 培训计划中增加开启考试功能，护理点击开始考试后手机终端才可打开试卷。
+1.
+	-- Add/modify columns 
+	alter table T_PEIXUNJIHUA_MUBAN add KAIQIKAOSHI nvarchar2(1) default '否';
+	-- Add comments to the columns 
+	comment on column T_PEIXUNJIHUA_MUBAN.kaishikaoshi
+	  is '是否开始考试，是：则允许手机考试终端查看并答题';
+2.
+	create or replace view v_peixunjihua_muban as
+	select t.Id,t.JiHuaId,t.MuBanId,t.MuBan,nvl(a.MuBanRenShu,0) as MuBanRenShu,t.KAIQIKAOSHI,t.AddTime,t.LastTime
+	from  T_PEIXUNJIHUA_MUBAN t
+	left join (
+		  select MuBanId,count(1) as MuBanRenShu
+		  from t_peixunjihua_mingxi
+		  where MuBanId is not null group by MuBanId) a on t.MuBanId = a.MuBanId;
+3.
+
+
+
+select to_char(ENTER_DATE_TIME,'yyyy-MM-dd') as DateStr,count(1) as DateCount
+from ORDERS@his t
+inner join dept_vs_ward a on t.ordering_dept = a.Dept_Code
+where 
+    t.ENTER_DATE_TIME > to_date('2017-09-01','yyyy-mm-dd') 
+and t.ENTER_DATE_TIME < to_date('2017-10-01','yyyy-mm-dd')
+and a.Ward_code = '0824H'
+and t.Nurse = '王静'
+group by t.Nurse,to_char(ENTER_DATE_TIME,'yyyy-MM-dd')
+order by to_char(ENTER_DATE_TIME,'yyyy-MM-dd')
+
+-- Create table 2017.9.25
+create table T_GongZuoLiang_PeiZhi
+(
+  id         varchar2(38) default sys_guid(),
+  orderno    integer default 0,
+  itemname   nvarchar2(50),
+  scorevalue integer,
+  sqltext    varchar2(2000)
+)
+;
+-- Add comments to the columns 
+comment on column T_GongZuoLiang_PeiZhi.orderno
+  is '排序';
+comment on column T_GongZuoLiang_PeiZhi.itemname
+  is '项目名称';
+comment on column T_GongZuoLiang_PeiZhi.scorevalue
+  is '分值';
+comment on column T_GongZuoLiang_PeiZhi.sqltext
+  is 'sql文本';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table T_GongZuoLiang_PeiZhi
+  add constraint T_GongZuoLiang_PeiZhi_PK primary key (ID);
+
+
+oracle 数据库导入导出
+1、导出数据库
+命令提示符窗口，输入：
+exp hrp/chd@localhost:1521/orcl file=F:/hrp20160812.dmp owner=hrp rows=n compress=n
+说明：
+hrp/chd@localhost:1521/orcl：数据库用户名/密码@数据库地址:端口号/数据库的SID。
+file：输出数据库文件到指定位置。
+owner：导出指定用户所属的全部表、索引和其他对象。
+rows=n：不导出数据行，默认值为y。
+compress=n：导出80M以上的大表时, 则不会引起这种错误，默认值为y。
+log：输出日志到指定位置。
+还有其他的参数请百度或者exp help=y获取帮助。
+
+胸科：
+exp hlgl/hlgl@local_orcl file=F:/hlgl20170922.dmp owner=hlgl
+
+
+2、导入数据库
+命令提示符窗口，输入：
+imp hrp1/chd@localhost:1521/orcl file=F:/hrp20160812.dmp buffer=65536 log=D:log.txt  ignore=y  full=y(fromuser=hrp touser=hrp1)
+说明：
+hrp1/chd@localhost:1521/orcl：数据库用户名/密码@数据库地址:端口号/数据库的SID。
+file：数据库文件指定位置
+fromuser：来自指定用户的表空间，可以不需要输入，将导入所有用户表空间的数据。
+touser：导入到指定用户的表空间。
+buffer：避免未知错误，指定缓冲大小。
+log：输出日志到指定位置。
+ignore：默认N,对已经存在的表中没有的记录进行更新，但对已经存在记录不会进行覆盖修改
+还有其他的参数请百度或者imp help=y获取帮助。
+
+导入：
+imp zhangcun/xtdhb@ORCL  file=E:\work\z中创佳和\docs\01护理管理\hlgl20170922.dmp buffer=65536 log=D:oraclImpLog.txt DESTROY=y  ignore=y  full=y
+
+
+
+护理管理系统
+已完成功能：
+
+系统管理
+	用户管理、科室管理、角色权限管理、更换用户、修改密码等；
+
+档案管理
+	档案管理，
+		包含子表维护项：专业技术职称晋升情况，其它资格证书取得情况，工作经历，学习培训情况，论文专著情况，
+			科研情况，新技术情况，培训考核情况，护理安全记录，奖惩情况，继续教育情况，专业学会情况
+培训管理
+	题库管理、试题模板、培训计划维护、计划确认、试卷评分、人员考试明细查询、科室成绩汇总
+质量管理
+	质量标准维护、质控计划维护、质控检查操作、质控检查确认、质控问题汇总、质控检查明细查询；
+
+统计查询His
+	压疮统计上报查询、跌倒坠床高危上报表、病房一日动态项目汇总、护理各类管路统计
+
+未完成功能：科室技能培训考核，质控科室检查；
+
+2017.6.6
+	档案管理bug修复
+
+1.增加视图： V_PEIXUNJIHUA_MUBAN
+
+2017.5.31
+	1.培训计划确认，未选中点击确认报错的问题；
+	2.培训计划护士长确认后不再允许分配人员；
+	3.培训计划护理部可对所有人员进行分配；
+
+
+	1.质控计划检查-标准数不显示；
+	1.质控检查  
+	检查录入改为计划确认，当该计划所有项目进行检查完毕后由护理部操作，“检查录入”改为“计划确认”
+	确认后护士长可查看该计划的检查结果，并进行确认及反馈；
+
+2.检查项确认
+  质控检查小组对自己有权限的检查项目进行确认，确认后生成合格率；
+  添加问题项需要选择录入此检查人员的名单；
+3.技能操作培训考核
+
+
+2017.5.25
+	增加技能培训模块（未完成）；增加原题补考；试题模板中增加重新评分；
+2017.5.22
+	质控管理增加标准类别权限,指定人员才可添加指定问题项;
+	质控管理选择人员从权限组Id为条件筛选,可去掉不必要人员的显示;
+
+2017.5.17
+质控管理新需求
+	1.权限：录入权限——各项检查组组长录入：只有组长能录入，并只能录入自己负责的部分；其他人可以查看，但不能编辑；
+	  护理部拥有所有权限；
+	2.打印：在反馈、统计处添加打印功能；
+	3.统计：组长——自己负责向：所有科室此项的问题（问题，原因，改进）；合格率；
+	  护理部——全院科室各项问题（问题，原因，改进）；合格率（各项合格率）；
+	  
+	4.在反馈处添加输入框：原因分析
+	5.反馈鱼骨图
+
+	反馈表
+
+	User ID=zhangcun;Password=xtdhb;Data Source=(DESCRIPTION = (ADDRESS_LIST= (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))) (CONNECT_DATA = (SERVICE_NAME = ORCL)))

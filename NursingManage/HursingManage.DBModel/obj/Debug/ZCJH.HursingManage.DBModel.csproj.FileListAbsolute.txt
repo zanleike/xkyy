@@ -1,0 +1,10 @@
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\ZCJH.HursingManage.DBModel.dll
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\ZCJH.HursingManage.DBModel.pdb
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\ZhCun.Framework.dll
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\MySql.Data.dll
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\Oracle.ManagedDataAccess.dll
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\System.Data.SQLite.dll
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\bin\Debug\ZhCun.Framework.pdb
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\obj\Debug\ZCJH.HursingManage.DBModel.csprojResolveAssemblyReference.cache
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\obj\Debug\ZCJH.HursingManage.DBModel.dll
+G:\code\NursingManage\ZCJH.HursingManage.DBModel\obj\Debug\ZCJH.HursingManage.DBModel.pdb
