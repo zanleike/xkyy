@@ -51,3 +51,13 @@ C:\NursingManage\HursingManage.DBModel\bin\Debug\Framework.pdb
 C:\NursingManage\HursingManage.DBModel\obj\Debug\HursingManage.DBModel.csprojResolveAssemblyReference.cache
 C:\NursingManage\HursingManage.DBModel\obj\Debug\HursingManage.DBModel.dll
 C:\NursingManage\HursingManage.DBModel\obj\Debug\HursingManage.DBModel.pdb
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\HursingManage.DBModel.dll
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\HursingManage.DBModel.pdb
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\Framework.dll
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\System.Data.SQLite.dll
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\bin\Debug\Framework.pdb
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\obj\Debug\HursingManage.DBModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\obj\Debug\HursingManage.DBModel.dll
+C:\Users\Administrator\xkyy\NursingManage\HursingManage.DBModel\obj\Debug\HursingManage.DBModel.pdb

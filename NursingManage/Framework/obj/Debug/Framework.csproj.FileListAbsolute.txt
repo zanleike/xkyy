@@ -32,3 +32,10 @@ C:\NursingManage\Framework\bin\Debug\Framework.pdb
 C:\NursingManage\Framework\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\NursingManage\Framework\obj\Debug\Framework.dll
 C:\NursingManage\Framework\obj\Debug\Framework.pdb
+C:\Users\Administrator\xkyy\NursingManage\Framework\bin\Debug\Framework.dll.config
+C:\Users\Administrator\xkyy\NursingManage\Framework\bin\Debug\Framework.dll
+C:\Users\Administrator\xkyy\NursingManage\Framework\bin\Debug\Framework.pdb
+C:\Users\Administrator\xkyy\NursingManage\Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Administrator\xkyy\NursingManage\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\xkyy\NursingManage\Framework\obj\Debug\Framework.dll
+C:\Users\Administrator\xkyy\NursingManage\Framework\obj\Debug\Framework.pdb

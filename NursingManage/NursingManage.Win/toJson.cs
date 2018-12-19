@@ -15,7 +15,15 @@ namespace NursingManage.Win
         {
             string path = Directory.GetCurrentDirectory();
             path = path + "\\dept_dict.txt";
-            string jsonText = this.ReadTxtContent(path);
+            string jsonText = ""; 
+            try
+            {
+                jsonText = this.ReadTxtContent(path);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("请检查dept_dict.txt文件！");
+            }
             //string jsonText = "{\"shenzheng\":\"深圳\",\"beijing\":\"北京\",\"shanghai\":[{\"zj1\":\"zj11\",\"zj2\":\"zj22\"},\"zjs\"]}";
             //转为json对象
             JObject jo = (JObject)JsonConvert.DeserializeObject(jsonText);

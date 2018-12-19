@@ -1,0 +1,37 @@
+[08:22:26.305][FATAL][9]:②出现应用程序未处理的异常：2018/12/19 8:22:26
+异常类型：FileNotFoundException
+异常消息：未能找到文件“C:\Users\Administrator\xkyy\NursingManage\NursingManage.Win\bin\Release\dept_dict.txt”。
+异常信息：   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 NursingManage.Win.toJson.ReadTxtContent(String Path) 位置 C:\Users\Administrator\xkyy\NursingManage\NursingManage.Win\toJson.cs:行号 47
+   在 NursingManage.Win.toJson.strJson(String deptName) 位置 C:\Users\Administrator\xkyy\NursingManage\NursingManage.Win\toJson.cs:行号 17
+   在 NursingManage.Win.TongJiByHis.ucHuLiGuanLuTongJiKeShi.GetProcedureModel() 位置 C:\Users\Administrator\xkyy\NursingManage\NursingManage.Win\TongJiByHis\ucHuLiGuanLuTongJiKeShi.cs:行号 26
+   在 NursingManage.Win.TongJiByHis.FrmTongJiBase.tsbtnSearchProc_Click(Object sender, EventArgs e) 位置 C:\Users\Administrator\xkyy\NursingManage\NursingManage.Win\TongJiByHis\FrmTongJiBase.cs:行号 52
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+[08:22:26.345][ERROR][9]:写数据库日志出错!
+Oracle.ManagedDataAccess.Client.OracleException (0x80004005): ORA-01401: 插入的值对于列过大
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, CommandType cmdType, DbParameter[] param) 位置 C:\Users\Administrator\xkyy\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 185
+   在 Framework.DBHelper.DbHelperBase.ExecNonQuery(String sqlText, DbParameter[] param) 位置 C:\Users\Administrator\xkyy\NursingManage\Framework\DBHelper\DbHelperBase.cs:行号 198
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder) 位置 C:\Users\Administrator\xkyy\NursingManage\Framework\Core\DBContext.cs:行号 117
+   在 HursingManage.AL.DBOracle.ExecSql(ISqlBuilder sqlBuilder) 位置 C:\Users\Administrator\xkyy\NursingManage\HursingManage.AL\ALBase.cs:行号 53
+   在 Framework.Core.DBContext.ExecSql(ISqlBuilder sqlBuilder, String sqlWhere) 位置 C:\Users\Administrator\xkyy\NursingManage\Framework\Core\DBContext.cs:行号 128
+   在 Framework.Core.DBContext.Insert[TEntity](TEntity entity) 位置 C:\Users\Administrator\xkyy\NursingManage\Framework\Core\DBContext.cs:行号 136
+   在 HursingManage.AL.DBOracle.Insert[TEntity](TEntity entity) 位置 C:\Users\Administrator\xkyy\NursingManage\HursingManage.AL\ALBase.cs:行号 69
+   在 HursingManage.AL.ALBase.WriteDBLog(String logContent, Object[] formatArgs) 位置 C:\Users\Administrator\xkyy\NursingManage\HursingManage.AL\ALBase.cs:行号 277

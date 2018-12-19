@@ -39,3 +39,11 @@ C:\NursingManage\Framework.Common\bin\Debug\Framework.Common.pdb
 C:\NursingManage\Framework.Common\obj\Debug\Framework.Common.csprojResolveAssemblyReference.cache
 C:\NursingManage\Framework.Common\obj\Debug\Framework.Common.dll
 C:\NursingManage\Framework.Common\obj\Debug\Framework.Common.pdb
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\bin\Debug\log4net.config
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\bin\Debug\Framework.Common.dll.config
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\bin\Debug\Framework.Common.XML
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\bin\Debug\Framework.Common.dll
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\bin\Debug\Framework.Common.pdb
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\obj\Debug\Framework.Common.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\obj\Debug\Framework.Common.dll
+C:\Users\Administrator\xkyy\NursingManage\Framework.Common\obj\Debug\Framework.Common.pdb
